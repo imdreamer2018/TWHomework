@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Version: 0.1.0
+Built-By: qian.yang
+Implementation-Vendor-Id: org.springframework
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_211
+Main-Class: ${start-class}
+
