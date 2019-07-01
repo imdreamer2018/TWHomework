@@ -34,8 +34,6 @@ public class UserServiceTest {
 
     private static User LI_SI = new User("zhangsan",19,"male");
 
-    private static User WANG_WU = new User("wangwu",20,"female");
-
 
     @Test
     public void should_throw_exception_when_create_user_with_username_is_exist(){
