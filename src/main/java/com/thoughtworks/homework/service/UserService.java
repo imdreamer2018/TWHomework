@@ -7,7 +7,6 @@ import com.thoughtworks.homework.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,14 +24,11 @@ public class UserService {
     }
 
     public  UserDTO<User> creatUser(User user) throws BaseUserException {
-        List<User> u = userRepository.findUser(user.getUsername());
-        if (!u.isEmpty()) {
+        Optional<User> u = userRepository.findUser(user.getUsername());
+        if (u.isPresent()) {
             throw new BaseUserException("用户已存在");
         }
-        User n = new User();
-        n.setUsername(user.getUsername());
-        n.setAge(user.getAge());
-        n.setGender(user.getGender());
+        User n = new User(user.getUsername(),user.getAge(),user.getGender());
         userRepository.save(n);
         UserDTO<User> u1 = new UserDTO<>();
         u1.setCode(201);
@@ -59,8 +55,8 @@ public class UserService {
             if(u.get().getUsername().equals(user.getUsername()))
                 throw new BaseUserException("该用户名无需修改！");
             else {
-                List <User> list = userRepository.findUser(user.getUsername());
-                if(list.isEmpty()) {
+                Optional<User> list = userRepository.findUser(user.getUsername());
+                if(!list.isPresent()) {
                     u.get().setUsername(user.getUsername());
                     userRepository.save(u.get());
                     UserDTO<User> u1 = new UserDTO<>();

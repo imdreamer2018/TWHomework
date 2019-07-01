@@ -1,11 +1,13 @@
 package com.thoughtworks.homework.entity;
+import lombok.Getter;
+import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Getter
+@Setter
 @Entity
+@Table(name = "user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,35 +19,10 @@ public class User {
 
     private String gender;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
+    public User(String username, int age, String gender) {
         this.username = username;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
         this.age = age;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
         this.gender = gender;
     }
 
-    public String print(){
-        return "{" + this.id + " "+ this.username+  " " + this.age + " "+ this.gender+ "}";
-    }
 }
