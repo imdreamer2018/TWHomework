@@ -19,6 +19,8 @@ public class User {
 
     private String gender;
 
+    public User(){}
+
     public User(String username, int age, String gender) {
         this.username = username;
         this.age = age;
