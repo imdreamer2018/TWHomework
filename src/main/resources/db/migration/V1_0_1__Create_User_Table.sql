@@ -1,0 +1,8 @@
+CREATE TABLE role (
+  id INT NOT NULL AUTO_INCREMENT,
+  username VARCHAR(50) NOT NULL,
+  age INT NOT NULL;
+  gender VARCHAR(50) NOT NULL,
+  CONSTRAINT pk_user PRIMARY KEY (id),
+  CONSTRAINT pk_username UNIQUE (username)
+);

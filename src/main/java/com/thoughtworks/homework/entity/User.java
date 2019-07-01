@@ -17,9 +17,10 @@ public class User {
 
     private String gender;
 
-    public Integer getId() {
-        return id;
-    }
+    public Integer getId() { return id; }
+
+    public void setId(int id) { this.id=id; }
+
 
     public String getUsername() {
         return username;
@@ -29,6 +30,7 @@ public class User {
         this.username = username;
     }
 
+
     public int getAge() {
         return age;
     }
@@ -37,6 +39,7 @@ public class User {
         this.age = age;
     }
 
+
     public String getGender() {
         return gender;
     }
@@ -44,6 +47,7 @@ public class User {
     public void setGender(String gender) {
         this.gender = gender;
     }
+
 
     public String print(){
         return "{" + this.id + " "+ this.username+  " " + this.age + " "+ this.gender+ "}";
