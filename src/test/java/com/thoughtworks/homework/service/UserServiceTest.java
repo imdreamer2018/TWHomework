@@ -34,7 +34,6 @@ public class UserServiceTest {
 
     private static User LI_SI = new User("zhangsan",19,"male");
 
-    private static User WANG_WU = new User("wangwu",20,"female");
 
 
     @Test
