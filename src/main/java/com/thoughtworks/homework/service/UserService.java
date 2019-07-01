@@ -52,21 +52,17 @@ public class UserService {
     public UserDTO<User> updateUserById(User user) throws BaseUserException {
         Optional<User> u = userRepository.findById(user.getId());
         if(u.isPresent()){
-            if(u.get().getUsername().equals(user.getUsername()))
-                throw new BaseUserException("该用户名无需修改！");
-            else {
-                Optional<User> list = userRepository.findUser(user.getUsername());
-                if(!list.isPresent()) {
-                    u.get().setUsername(user.getUsername());
-                    userRepository.save(u.get());
-                    UserDTO<User> u1 = new UserDTO<>();
-                    u1.setCode(200);
-                    u1.setData(u.get());
-                    u1.setMessage("用户名修改成功！");
-                    return u1;
-                }
-                throw new BaseUserException("该用户名已存在");
+            Optional<User> list = userRepository.findUser(user.getUsername());
+            if(!list.isPresent()) {
+                u.get().setUsername(user.getUsername());
+                userRepository.save(u.get());
+                UserDTO<User> u1 = new UserDTO<>();
+                u1.setCode(200);
+                u1.setData(u.get());
+                u1.setMessage("用户名修改成功！");
+                return u1;
             }
+            throw new BaseUserException("该用户名已存在");
         }
         throw new BaseUserException("该用户不存在！");
     }
