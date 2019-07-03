@@ -56,7 +56,7 @@ public class UserServiceTest {
     @Test
     public void should_return_usersInfo_when_get_users(){
 
-        when(userRepository.findAll()).thenReturn(Collections.singleton((ZHANG_SAN)));
+        when(userRepository.findAll()).thenReturn(Collections.singletonList(ZHANG_SAN));
 
         UserDTO<Iterable<User>> u = userService.getAllUsers();
 
@@ -75,6 +75,8 @@ public class UserServiceTest {
 
     @Test
     public void should_return_userInfo_when_find_user_by_id_with_user_is_exist() throws BaseUserException {
+
+        ZHANG_SAN.setId(1);
 
         when(userRepository.findById(anyInt())).thenReturn(Optional.ofNullable(ZHANG_SAN));
 
