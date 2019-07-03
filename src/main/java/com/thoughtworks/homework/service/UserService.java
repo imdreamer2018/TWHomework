@@ -24,7 +24,7 @@ public class UserService {
     }
 
     public  UserDTO<User> creatUser(User user) throws BaseUserException {
-        Optional<User> u = userRepository.findUser(user.getUsername());
+        Optional<User> u = userRepository.findUserByUsername(user.getUsername());
         if (u.isPresent()) {
             throw new BaseUserException("用户已存在");
         }
@@ -52,7 +52,7 @@ public class UserService {
     public UserDTO<User> updateUserById(User user) throws BaseUserException {
         Optional<User> u = userRepository.findById(user.getId());
         if(u.isPresent()){
-            Optional<User> list = userRepository.findUser(user.getUsername());
+            Optional<User> list = userRepository.findUserByUsername(user.getUsername());
             if(!list.isPresent()) {
                 u.get().setUsername(user.getUsername());
                 userRepository.save(u.get());

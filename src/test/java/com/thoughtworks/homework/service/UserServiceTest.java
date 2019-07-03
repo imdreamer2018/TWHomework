@@ -37,7 +37,7 @@ public class UserServiceTest {
 
     @Test
     public void should_throw_exception_when_create_user_with_username_is_exist(){
-        when(userRepository.findUser(anyString())).thenReturn(java.util.Optional.ofNullable(ZHANG_SAN));
+        when(userRepository.findUserByUsername(anyString())).thenReturn(java.util.Optional.ofNullable(ZHANG_SAN));
 
         BaseUserException exception = assertThrows(BaseUserException.class,() ->userService.creatUser(ZHANG_SAN));
 
@@ -46,7 +46,7 @@ public class UserServiceTest {
 
     @Test
     public void should_return_userInfo_when_create_user_with_username_is_not_used() throws BaseUserException {
-        when(userRepository.findUser(anyString())).thenReturn(Optional.empty());
+        when(userRepository.findUserByUsername(anyString())).thenReturn(Optional.empty());
 
         UserDTO<User> u = userService.creatUser(ZHANG_SAN);
 
@@ -105,7 +105,7 @@ public class UserServiceTest {
 
         when(userRepository.findById(anyInt())).thenReturn(Optional.ofNullable(ZHANG_SAN));
 
-        when(userRepository.findUser(anyString())).thenReturn(Optional.ofNullable(LI_SI));
+        when(userRepository.findUserByUsername(anyString())).thenReturn(Optional.ofNullable(LI_SI));
 
         BaseUserException exception = assertThrows(BaseUserException.class,() ->userService.updateUserById(ZHANG_SAN));
 
@@ -119,7 +119,7 @@ public class UserServiceTest {
 
         when(userRepository.findById(anyInt())).thenReturn(Optional.ofNullable(ZHANG_SAN));
 
-        when(userRepository.findUser(anyString())).thenReturn(Optional.empty());
+        when(userRepository.findUserByUsername(anyString())).thenReturn(Optional.empty());
 
         UserDTO<User> u = userService.updateUserById(ZHANG_SAN);
 
