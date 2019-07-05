@@ -33,3 +33,5 @@ w
 Gsrc/main/java/com/thoughtworks/homework/controller/RedisController.java,4/f/4f213646bb41d162dd1dfbf483a40c06f31e0f66
 }
 Msrc/main/java/com/thoughtworks/homework/configuration/RedisConfiguration.java,f/b/fb63119fb426c204ff7057fe465460494b0e50d7
+€
+Psrc/main/java/com/thoughtworks/homework/configuration/KeyVaultConfiguration.java,3/b/3b949da67c476ecde920b6a6d5620021e5c43501

@@ -1,0 +1,63 @@
+{
+  "groups": [
+    {
+      "name": "keyvault",
+      "type": "com.thoughtworks.homework.configuration.KeyVaultConfiguration",
+      "sourceType": "com.thoughtworks.homework.configuration.KeyVaultConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "keyvault.blob-connection-string-key",
+      "type": "java.lang.String",
+      "sourceType": "com.thoughtworks.homework.configuration.KeyVaultConfiguration"
+    },
+    {
+      "name": "keyvault.client-id",
+      "type": "java.lang.String",
+      "sourceType": "com.thoughtworks.homework.configuration.KeyVaultConfiguration"
+    },
+    {
+      "name": "keyvault.client-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.thoughtworks.homework.configuration.KeyVaultConfiguration"
+    },
+    {
+      "name": "keyvault.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.thoughtworks.homework.configuration.KeyVaultConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "keyvault.mysql-host-key",
+      "type": "java.lang.String",
+      "sourceType": "com.thoughtworks.homework.configuration.KeyVaultConfiguration"
+    },
+    {
+      "name": "keyvault.mysql-password-key",
+      "type": "java.lang.String",
+      "sourceType": "com.thoughtworks.homework.configuration.KeyVaultConfiguration"
+    },
+    {
+      "name": "keyvault.mysql-user-key",
+      "type": "java.lang.String",
+      "sourceType": "com.thoughtworks.homework.configuration.KeyVaultConfiguration"
+    },
+    {
+      "name": "keyvault.name",
+      "type": "java.lang.String",
+      "sourceType": "com.thoughtworks.homework.configuration.KeyVaultConfiguration"
+    },
+    {
+      "name": "keyvault.redis-key",
+      "type": "java.lang.String",
+      "sourceType": "com.thoughtworks.homework.configuration.KeyVaultConfiguration"
+    },
+    {
+      "name": "keyvault.service-bus-connection-string",
+      "type": "java.lang.String",
+      "sourceType": "com.thoughtworks.homework.configuration.KeyVaultConfiguration"
+    }
+  ],
+  "hints": []
+}

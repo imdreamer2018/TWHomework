@@ -1,5 +1,13 @@
 buildscript {
     repositories {
+        maven {
+            url "https://ci.otr.mercedes-benz.com.cn:8443/repository/mvngroup/"
+            credentials {
+                username = repoUser
+                password = repoPassword
+            }
+        }
+        maven { url "https://plugins.gradle.org/m2/" }
         mavenCentral()
     }
     dependencies {
@@ -19,6 +27,13 @@ bootJar {
 }
 
 repositories {
+    maven {
+        url "https://ci.otr.mercedes-benz.com.cn:8443/repository/mvngroup/"
+        credentials {
+            username = repoUser
+            password = repoPassword
+        }
+    }
     mavenCentral()
 }
 
@@ -39,8 +54,20 @@ dependencies {
     // https://mvnrepository.com/artifact/org.flywaydb/flyway-core
     compile group: 'org.flywaydb', name: 'flyway-core', version: '5.2.4'
 
+    compile 'otr:keyvault-spring-boot-starter:springboot-1.5'
+
+    // https://mvnrepository.com/artifact/com.microsoft.azure/azure-keyvault
+    compile group: 'com.microsoft.azure', name: 'azure-keyvault', version: '0.8.3'
+
+    compileOnly "org.springframework.boot:spring-boot-configuration-processor"
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-pool2
+    compile group: 'org.apache.commons', name: 'commons-pool2', version: '2.3'
+
     // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
     compile group: 'org.springframework', name: 'spring-jdbc', version: '5.1.5.RELEASE'
+
+    compile 'redis.clients:jedis:2.9.0'
 
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.1.6.RELEASE'

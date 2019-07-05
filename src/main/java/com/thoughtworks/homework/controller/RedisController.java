@@ -25,4 +25,11 @@ public class RedisController {
     public Object getUser(@RequestParam String username){
         return redisService.get(username);
     }
+
+    @RequestMapping(path = "/clearRedis")
+    @ResponseBody
+    public String clearRedis(){
+        redisService.clearRedis();
+        return "clear success!";
+    }
 }

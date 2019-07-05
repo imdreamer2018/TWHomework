@@ -1,2 +1,2 @@
 
-®%squid:RedundantThrowsDeclarationCheck"vRemove the declaration of thrown exception 'java.net.UnknownHostException', as it cannot be thrown from method's body.(Ëºäª8íõá¹»-
+{squid:S3305"]Inject this field value directly into "redisConnectionFactory", the only method that uses it.(íæÕ¢8ö»™†¼-
