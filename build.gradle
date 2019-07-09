@@ -56,8 +56,8 @@ dependencies {
 
     compile 'otr:keyvault-spring-boot-starter:springboot-1.5'
 
-    // https://mvnrepository.com/artifact/com.microsoft.azure/azure-keyvault
-    compile group: 'com.microsoft.azure', name: 'azure-keyvault', version: '0.8.3'
+    // https://mvnrepository.com/artifact/com.microsoft.rest/client-runtime
+    compile group: 'com.microsoft.rest', name: 'client-runtime', version: '1.6.10'
 
     compileOnly "org.springframework.boot:spring-boot-configuration-processor"
 
@@ -71,6 +71,12 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.1.6.RELEASE'
+
+    // https://mvnrepository.com/artifact/at.favre.lib/bcrypt
+    compile group: 'at.favre.lib', name: 'bcrypt', version: '0.8.0'
+
+    // https://mvnrepository.com/artifact/org.springframework.security/spring-security-core
+    compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.1.5.RELEASE'
 
     // https://mvnrepository.com/artifact/junit/junit
     testCompile group: 'junit', name: 'junit', version: '4.12'

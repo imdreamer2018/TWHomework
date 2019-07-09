@@ -1,6 +1,6 @@
 package com.thoughtworks.homework.controller;
 
-import com.thoughtworks.homework.dto.UserDTO;
+import com.thoughtworks.homework.dto.UserResponse;
 import com.thoughtworks.homework.entity.User;
 import com.thoughtworks.homework.exception.BaseUserException;
 import com.thoughtworks.homework.service.UserService;
@@ -28,7 +28,7 @@ public class UserController {
 
     @GetMapping(path = "/users")
     @ResponseBody
-    public UserDTO<Iterable<User>> getAllUsers(){
+    public UserResponse<Iterable<User>> getAllUsers(){
 
         return userService.getAllUsers();
     }
@@ -36,7 +36,7 @@ public class UserController {
     @PostMapping(path = "/user")
     @ResponseBody
     @ResponseStatus(HttpStatus.CREATED)
-    public UserDTO<User> addNewUser(@RequestBody User user) throws BaseUserException {
+    public UserResponse<User> addNewUser(@RequestBody User user) throws BaseUserException {
         return userService.creatUser(user);
     }
 
@@ -48,21 +48,21 @@ public class UserController {
 
     @GetMapping(path="/user")
     @ResponseBody
-    public UserDTO<User> getUser(@RequestParam int id) throws BaseUserException {
+    public UserResponse<User> getUser(@RequestParam int id) throws BaseUserException {
         return userService.findUserById(id);
     }
 
     @PutMapping(path="/user")
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    public  UserDTO<User> updateUser(@RequestBody User user) throws BaseUserException {
+    public UserResponse<User> updateUser(@RequestBody User user) throws BaseUserException {
         return userService.updateUserById(user);
     }
 
     @DeleteMapping(path = "/user")
     @ResponseBody
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public UserDTO<User> deleteUser(@RequestParam int id) throws BaseUserException {
+    public UserResponse<User> deleteUser(@RequestParam int id) throws BaseUserException {
        return userService.deleteUser(id);
     }
 

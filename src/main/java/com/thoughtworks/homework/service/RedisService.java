@@ -5,6 +5,10 @@ import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 @Service
@@ -26,6 +30,15 @@ public class RedisService {
     public void clearRedis() {
         Set<String> keys = redisTemplate.keys(""+"*");
         redisTemplate.delete(keys);
+    }
+
+    public Map<String, Object> setStatus(String message) {
+        Map<String,Object> result = new HashMap<>();
+        Date d = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
+        result.put("lastTime",sdf.format(d));
+        result.put("lastStatus",message);
+        return result;
     }
 
 

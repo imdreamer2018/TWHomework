@@ -30,7 +30,7 @@ spring:
 keyvault:
   client_id: ${AD_CLIENTID:''}
   client_secret: ${AD_SECRET:''}
-  enabled: true
+  enabled: false
   mysql_host_key: IOTRSQLDBHOST12
   mysql_password_key: IOTRSQLDBPAWD12
   mysql_user_key: IOTRSQLDBUSER12

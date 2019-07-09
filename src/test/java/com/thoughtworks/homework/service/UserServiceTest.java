@@ -1,5 +1,5 @@
 //package com.thoughtworks.homework.service;
-//import com.thoughtworks.homework.dto.UserDTO;
+//import com.thoughtworks.homework.dto.UserResponse;
 //import com.thoughtworks.homework.entity.User;
 //import com.thoughtworks.homework.exception.BaseUserException;
 //import com.thoughtworks.homework.repository.UserRepository;
@@ -48,7 +48,7 @@
 //    public void should_return_userInfo_when_create_user_with_username_is_not_used() throws BaseUserException {
 //        when(userRepository.findUserByUsername(anyString())).thenReturn(Optional.empty());
 //
-//        UserDTO<User> u = userService.creatUser(ZHANG_SAN);
+//        UserResponse<User> u = userService.creatUser(ZHANG_SAN);
 //
 //        assertEquals("添加用户成功！",u.getMessage());
 //    }
@@ -58,7 +58,7 @@
 //
 //        when(userRepository.findAll()).thenReturn(Collections.singletonList(ZHANG_SAN));
 //
-//        UserDTO<Iterable<User>> u = userService.getAllUsers();
+//        UserResponse<Iterable<User>> u = userService.getAllUsers();
 //
 //        assertEquals("数据获取成功！",u.getMessage());
 //    }
@@ -80,7 +80,7 @@
 //
 //        when(userRepository.findById(anyInt())).thenReturn(Optional.ofNullable(ZHANG_SAN));
 //
-//        UserDTO<User> u = userService.findUserById(1);
+//        UserResponse<User> u = userService.findUserById(1);
 //
 //        assertEquals("查找成功",u.getMessage());
 //    }
@@ -121,7 +121,7 @@
 //
 //        when(userRepository.findUserByUsername(anyString())).thenReturn(Optional.empty());
 //
-//        UserDTO<User> u = userService.updateUserById(ZHANG_SAN);
+//        UserResponse<User> u = userService.updateUserById(ZHANG_SAN);
 //
 //        assertEquals("用户名修改成功！",u.getMessage());
 //    }
@@ -141,7 +141,7 @@
 //
 //        when(userRepository.findById(anyInt())).thenReturn(Optional.ofNullable(ZHANG_SAN));
 //
-//        UserDTO<User> u = userService.deleteUser(1);
+//        UserResponse<User> u = userService.deleteUser(1);
 //
 //        assertEquals("该用户信息已删除！",u.getMessage());
 //    }

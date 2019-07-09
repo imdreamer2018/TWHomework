@@ -13,8 +13,6 @@ p
 @src/main/java/com/thoughtworks/homework/service/UserService.java,2/b/2b945e7c2e27a76b7207b36d24957609a2b1204b
 h
 8src/main/java/com/thoughtworks/homework/Application.java,2/1/21c43f623bcd341ee1322de8f74ec00664b0f7ac
-h
-8src/main/java/com/thoughtworks/homework/dto/UserDTO.java,b/9/b9c3e8cf9f2ad4b63d40ad08203bd8951de0d91c
 i
 9src/main/java/com/thoughtworks/homework/dto/ErrorDTO.java,e/f/ef22a4cae6ec3fdc7c8efa9a72139c4621d516e7
 x
@@ -35,3 +33,7 @@ Gsrc/main/java/com/thoughtworks/homework/controller/RedisController.java,4/f/4f
 Msrc/main/java/com/thoughtworks/homework/configuration/RedisConfiguration.java,f/b/fb63119fb426c204ff7057fe465460494b0e50d7
 €
 Psrc/main/java/com/thoughtworks/homework/configuration/KeyVaultConfiguration.java,3/b/3b949da67c476ecde920b6a6d5620021e5c43501
+}
+Msrc/main/java/com/thoughtworks/homework/exception/GlobalExceptionHandler.java,9/6/96b700b57d6a01e4646b781d9b2713ef519dc4c5
+m
+=src/main/java/com/thoughtworks/homework/dto/UserResponse.java,7/4/74d27ae4ace6a6d249b71cdd675f23f79265856b
