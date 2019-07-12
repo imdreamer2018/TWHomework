@@ -5,6 +5,8 @@ import com.thoughtworks.homework.dto.UserResponse;
 import com.thoughtworks.homework.entity.User;
 import com.thoughtworks.homework.service.AuthorizationService;
 import com.thoughtworks.homework.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(path = "/api/auth")
+@Api(tags = "AuthController")
 public class AuthController {
 
     @Autowired
@@ -20,12 +23,14 @@ public class AuthController {
     @Autowired
     private AuthorizationService authorizationService;
 
+    @ApiOperation(value = "Hello,World!")
     @PostMapping(path = "/")
     public @ResponseBody String index(){
         System.out.println("hello,world");
         return "Hello World!";
     }
 
+    @ApiOperation(value = "注册账户信息",notes = "需要注册验证码")
     @PostMapping(path = "/register")
     @ResponseBody
     @ResponseStatus(HttpStatus.CREATED)
@@ -33,6 +38,7 @@ public class AuthController {
         return userService.creatUser(user,registerCode);
     }
 
+    @ApiOperation(value = "重置账户密码",notes = "需要重置验证码")
     @PostMapping(path = "/resetPassword")
     @ResponseBody
     public UserResponse<User> resetPassword(@RequestParam String email,@RequestParam String password,@RequestParam String resetPasswordCode) {

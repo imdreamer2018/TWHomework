@@ -3,6 +3,7 @@ package com.thoughtworks.homework.controller;
 import com.thoughtworks.homework.dto.UserResponse;
 import com.thoughtworks.homework.entity.User;
 import com.thoughtworks.homework.service.UserService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import javax.persistence.EntityNotFoundException;
 
 @Controller
 @RequestMapping(path="/api")
+@Api(tags = "UserController")
 public class UserController {
 
     @Autowired

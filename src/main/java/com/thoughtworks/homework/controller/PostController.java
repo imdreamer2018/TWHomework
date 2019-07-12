@@ -3,6 +3,7 @@ package com.thoughtworks.homework.controller;
 import com.thoughtworks.homework.dto.PostResponse;
 import com.thoughtworks.homework.entity.Post;
 import com.thoughtworks.homework.service.PostService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(path = "/api")
+@Api(tags = "PostController")
 public class PostController {
 
     @Autowired

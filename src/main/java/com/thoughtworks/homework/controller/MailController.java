@@ -2,6 +2,7 @@ package com.thoughtworks.homework.controller;
 
 import com.thoughtworks.homework.dto.MailResponse;
 import com.thoughtworks.homework.service.MailService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping(path="/api/mail")
+@Api(tags = "MailController")
 public class MailController {
 
     @Autowired

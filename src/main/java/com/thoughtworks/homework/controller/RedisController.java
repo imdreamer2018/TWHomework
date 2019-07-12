@@ -2,6 +2,7 @@ package com.thoughtworks.homework.controller;
 
 import com.thoughtworks.homework.entity.User;
 import com.thoughtworks.homework.service.RedisService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping(path="/api")
+@Api(tags = "RedisController")
 public class RedisController {
 
     @Autowired
