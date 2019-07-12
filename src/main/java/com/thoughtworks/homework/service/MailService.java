@@ -34,7 +34,32 @@ public class MailService {
         MailResponse mailResponse = new MailResponse();
         mailResponse.setCode(200);
         mailResponse.setMessage("验证码发送成功!");
-        redisService.set(email,RegisterCode);
+        redisService.set_timeout("Register_"+email,RegisterCode,5);
+        return mailResponse;
+    }
+
+    public MailResponse sendResetPasswordCode(String email){
+        String ResetPasswordCode = String.valueOf((int)((Math.random()*9+1)*100000));
+        String message = "<div style=\"padding: 0px 0px 0px 20px;box-sizing: border-box;color: #333333;font-family: \"microsoft yahei\";font-size: 14px\">" +
+                "<h3 style=\"font-weight: normapri;font-size: 18px;\">Test测试</h3>" +
+                "<h4 style=\"color:#2672EC;font-size: 40px;margin-top: 24px;font-weight: normal;\">重置密码验证</h4>" +
+                "<div style=\"margin-top: 40px;\">您好，您正在使用<a href=\"javascript:;\" target=\"_blank\" style=\"color: #2672EC;text-decoration: none;\">"+email+"</a>重置密码</div>" +
+                "<div style=\"margin-top: 30px;\">您的：<em style=\"font-style: normal;font-weight: 600;\">"+ResetPasswordCode+"</em></div>" +
+                "<div style=\"margin-top: 35px;\">谢谢！</div>" +
+                "</div>";
+        try{
+            mailService.sendHtmlMail(email,"重置密码验证",message);
+        }catch (Exception e){
+            e.printStackTrace();
+            MailResponse mailResponse = new MailResponse();
+            mailResponse.setCode(400);
+            mailResponse.setMessage("验证码发送失败，请重新发送！");
+            return mailResponse;
+        }
+        MailResponse mailResponse = new MailResponse();
+        mailResponse.setCode(200);
+        mailResponse.setMessage("验证码发送成功!");
+        redisService.set_timeout("ResetPassword_"+email,ResetPasswordCode,5);
         return mailResponse;
     }
 }

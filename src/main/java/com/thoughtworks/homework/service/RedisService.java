@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 @Service
 public class RedisService {
@@ -20,6 +21,11 @@ public class RedisService {
     public void set(String key, Object value){
         ValueOperations<String, Object> vo = redisTemplate.opsForValue();
         vo.set(key, value);
+    }
+
+    void set_timeout(String key, Object value, int minute) {
+        ValueOperations<String, Object> vo = redisTemplate.opsForValue();
+        vo.set(key,value,minute, TimeUnit.MINUTES);
     }
 
     public Object get(String key) {

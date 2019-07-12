@@ -31,7 +31,8 @@ public class UserService {
     }
 
     public UserResponse<User> creatUser(User user,String registerCode) {
-        if (!redisService.get(user.getEmail()).equals(registerCode)){
+        String code = (String) redisService.get("Register_"+user.getEmail());
+        if (code == null || !code.equals(registerCode)){
             throw new BaseUserException("验证码错误！");
         }
         Optional<User> u = userRepository.findUserByEmail(user.getEmail());
@@ -44,6 +45,24 @@ public class UserService {
         u1.setCode(201);
         u1.setData(n);
         u1.setMessage("添加用户成功！");
+        return u1;
+    }
+
+    public UserResponse<User> resetUserPassword(String email,String password,String resetPasswordCode) {
+        String code = (String) redisService.get("ResetPassword_"+email);
+        if (code == null || !code.equals(resetPasswordCode)){
+            throw new BaseUserException("验证码错误！");
+        }
+        Optional<User> u = userRepository.findUserByEmail(email);
+        if (!u.isPresent()){
+            throw new BaseUserException("邮箱不存在");
+        }
+        u.get().setPassword(passwordEncoder.encode(password));
+        userRepository.save(u.get());
+        UserResponse<User> u1 = new UserResponse<>();
+        u1.setCode(200);
+        u1.setData(u.get());
+        u1.setMessage("密码重置成功！");
         return u1;
     }
 

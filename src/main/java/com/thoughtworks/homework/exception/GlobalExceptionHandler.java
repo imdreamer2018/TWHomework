@@ -18,7 +18,7 @@ public class GlobalExceptionHandler {
     public ErrorDTO jsonErrorHandler(HttpServletRequest req, UserException e) {
         ErrorDTO r = new ErrorDTO();
         r.setMessage(e.getMessage());
-        r.setCode(101);
+        r.setCode(400);
         return r;
     }
 
@@ -39,6 +39,16 @@ public class GlobalExceptionHandler {
         ErrorDTO r = new ErrorDTO();
         r.setMessage(e.getMessage());
         r.setCode(401);
+        return r;
+    }
+
+    @ExceptionHandler(value = BasePostException.class)
+    @ResponseBody
+    @ResponseStatus(HttpStatus.OK)
+    public ErrorDTO PostJsonErrorHandler(HttpServletRequest req, BasePostException e) {
+        ErrorDTO r = new ErrorDTO();
+        r.setMessage(e.getMessage());
+        r.setCode(200);
         return r;
     }
 

@@ -33,8 +33,15 @@ public class AuthController {
         return userService.creatUser(user,registerCode);
     }
 
+    @PostMapping(path = "/resetPassword")
+    @ResponseBody
+    public UserResponse<User> resetPassword(@RequestParam String email,@RequestParam String password,@RequestParam String resetPasswordCode) {
+        return userService.resetUserPassword(email,password,resetPasswordCode);
+    }
+
     @PostMapping(path = "/login")
     @ResponseBody
+
     public AuthorizationResponse login(@RequestParam String email, @RequestParam String password) {
         return authorizationService.login(email,password);
     }

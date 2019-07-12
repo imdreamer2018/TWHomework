@@ -16,9 +16,15 @@ public class MailController {
     @Autowired
     private MailService mailService;
 
-    @PostMapping(value = "/registerCode")
+    @PostMapping(path = "/registerCode")
     @ResponseBody
     public MailResponse sendRegisterCode(@RequestParam  String email) {
         return mailService.sendRegisterCode(email);
+    }
+
+    @PostMapping(path = "/resetPasswordCode")
+    @ResponseBody
+    public MailResponse sendResetPasswordCode(@RequestParam String email) {
+        return mailService.sendResetPasswordCode(email);
     }
 }
