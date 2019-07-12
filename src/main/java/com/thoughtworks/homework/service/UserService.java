@@ -5,6 +5,7 @@ import com.thoughtworks.homework.entity.User;
 import com.thoughtworks.homework.exception.BaseUserException;
 import com.thoughtworks.homework.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -15,6 +16,12 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private RedisService redisService;
+
     public UserResponse<Iterable<User>> getAllUsers(){
         UserResponse<Iterable<User>> u= new UserResponse<>();
         u.setCode(200);
@@ -23,12 +30,15 @@ public class UserService {
         return u;
     }
 
-    public UserResponse<User> creatUser(User user) {
-        Optional<User> u = userRepository.findUserByUsername(user.getUsername());
-        if (u.isPresent()) {
-            throw new BaseUserException("用户已存在");
+    public UserResponse<User> creatUser(User user,String registerCode) {
+        if (!redisService.get(user.getEmail()).equals(registerCode)){
+            throw new BaseUserException("验证码错误！");
         }
-        User n = new User(user.getUsername(),user.getAge(),user.getGender());
+        Optional<User> u = userRepository.findUserByEmail(user.getEmail());
+        if (u.isPresent()) {
+            throw new BaseUserException("邮箱已存在");
+        }
+        User n = new User(user.getUsername(),user.getEmail(),passwordEncoder.encode(user.getPassword()),user.getRole(),user.getAge(),user.getGender());
         userRepository.save(n);
         UserResponse<User> u1 = new UserResponse<>();
         u1.setCode(201);
@@ -37,8 +47,8 @@ public class UserService {
         return u1;
     }
 
-    public UserResponse<User> findUserById (int id) throws BaseUserException {
-        Optional<User> user = userRepository.findById(id);
+    public UserResponse<User> findUserByEmail (String email) throws BaseUserException {
+        Optional<User> user = userRepository.findUserByEmail(email);
         if(!user.isPresent()){
             throw new BaseUserException("用户不存在");
         }
@@ -49,8 +59,8 @@ public class UserService {
         return u;
     }
 
-    public UserResponse<User> updateUserById(User user) throws BaseUserException {
-        Optional<User> u = userRepository.findById(user.getId());
+    public UserResponse<User> updateUserByEmail(User user) throws BaseUserException {
+        Optional<User> u = userRepository.findUserByEmail(user.getEmail());
         if(u.isPresent()){
             Optional<User> list = userRepository.findUserByUsername(user.getUsername());
             if(!list.isPresent()) {

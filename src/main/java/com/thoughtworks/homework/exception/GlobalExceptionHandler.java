@@ -15,7 +15,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = UserException.class)
     @ResponseBody
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ErrorDTO jsonErrorHandler(HttpServletRequest req, UserException e) throws Exception {
+    public ErrorDTO jsonErrorHandler(HttpServletRequest req, UserException e) {
         ErrorDTO r = new ErrorDTO();
         r.setMessage(e.getMessage());
         r.setCode(101);
@@ -25,10 +25,20 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = BaseUserException.class)
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    public ErrorDTO BasejsonErrorHandler(HttpServletRequest req, BaseUserException e) throws Exception {
+    public ErrorDTO BasejsonErrorHandler(HttpServletRequest req, BaseUserException e) {
         ErrorDTO r = new ErrorDTO();
         r.setMessage(e.getMessage());
         r.setCode(200);
+        return r;
+    }
+
+    @ExceptionHandler(value = AuthorizationException.class)
+    @ResponseBody
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    public ErrorDTO AuthorizationHandler(HttpServletRequest req, AuthorizationException e) {
+        ErrorDTO r = new ErrorDTO();
+        r.setMessage(e.getMessage());
+        r.setCode(401);
         return r;
     }
 

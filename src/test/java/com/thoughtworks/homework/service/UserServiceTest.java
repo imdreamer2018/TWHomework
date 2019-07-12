@@ -10,8 +10,8 @@
 //import org.springframework.boot.test.context.SpringBootTest;
 //import org.springframework.test.context.junit4.SpringRunner;
 //
-//import java.util.Collections;
-//import java.util.Optional;
+//import java.utils.Collections;
+//import java.utils.Optional;
 //
 //import static org.junit.jupiter.api.Assertions.assertEquals;
 //import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -37,7 +37,7 @@
 //
 //    @Test
 //    public void should_throw_exception_when_create_user_with_username_is_exist(){
-//        when(userRepository.findUserByUsername(anyString())).thenReturn(java.util.Optional.ofNullable(ZHANG_SAN));
+//        when(userRepository.findUserByUsername(anyString())).thenReturn(java.utils.Optional.ofNullable(ZHANG_SAN));
 //
 //        BaseUserException exception = assertThrows(BaseUserException.class,() ->userService.creatUser(ZHANG_SAN));
 //

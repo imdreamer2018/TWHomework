@@ -2,11 +2,11 @@ package com.thoughtworks.homework.controller;
 
 import com.thoughtworks.homework.dto.UserResponse;
 import com.thoughtworks.homework.entity.User;
-import com.thoughtworks.homework.exception.BaseUserException;
 import com.thoughtworks.homework.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,13 +33,12 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @PostMapping(path = "/user")
-    @ResponseBody
-    @ResponseStatus(HttpStatus.CREATED)
-    public UserResponse<User> addNewUser(@RequestBody User user) throws BaseUserException {
-        return userService.creatUser(user);
-    }
-
+//    @PostMapping(path = "/user")
+//    @ResponseBody
+//    @ResponseStatus(HttpStatus.CREATED)
+//    public UserResponse<User> addNewUser(@RequestBody User user) {
+//        return userService.creatUser(user);
+//    }
 
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<String> handleException(EntityNotFoundException ex) {
@@ -48,21 +47,22 @@ public class UserController {
 
     @GetMapping(path="/user")
     @ResponseBody
-    public UserResponse<User> getUser(@RequestParam int id) throws BaseUserException {
-        return userService.findUserById(id);
+    public UserResponse<User> getUser(@RequestParam String email){
+        return userService.findUserByEmail(email);
     }
 
     @PutMapping(path="/user")
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    public UserResponse<User> updateUser(@RequestBody User user) throws BaseUserException {
-        return userService.updateUserById(user);
+    public UserResponse<User> updateUser(@RequestBody User user) {
+        return userService.updateUserByEmail(user);
     }
 
     @DeleteMapping(path = "/user")
+    @PreAuthorize("hasRole('ADMIN')")
     @ResponseBody
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public UserResponse<User> deleteUser(@RequestParam int id) throws BaseUserException {
+    public UserResponse<User> deleteUser(@RequestParam int id) {
        return userService.deleteUser(id);
     }
 
