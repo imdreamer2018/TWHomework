@@ -6,8 +6,8 @@ import com.thoughtworks.homework.entity.Posts;
 import com.thoughtworks.homework.entity.Users;
 import com.thoughtworks.homework.exception.AuthorizationException;
 import com.thoughtworks.homework.exception.BasePostException;
-import com.thoughtworks.homework.repository.CommentRespository;
-import com.thoughtworks.homework.repository.PostRespository;
+import com.thoughtworks.homework.repository.CommentRepository;
+import com.thoughtworks.homework.repository.PostRepository;
 import com.thoughtworks.homework.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -24,10 +24,10 @@ public class CommentService {
     private UserRepository userRepository;
 
     @Autowired
-    private PostRespository postRespository;
+    private PostRepository postRepository;
 
     @Autowired
-    private CommentRespository commentRespository;
+    private CommentRepository commentRepository;
 
     private Users getUserInfo() {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -35,7 +35,7 @@ public class CommentService {
         return user.get();
     }
     private Posts getPostInfo(int post_id) {
-        Optional<Posts> posts = postRespository.findById(post_id);
+        Optional<Posts> posts = postRepository.findById(post_id);
         return posts.get();
     }
 
@@ -47,11 +47,11 @@ public class CommentService {
         return postCommentResponse;
     }
 
-    public CommentResponse<Comments> getAllComments(){
-        CommentResponse<Comments> commentResponse = new CommentResponse<>();
+    public CommentResponse<Iterable<Comments>> getAllComments(){
+        CommentResponse<Iterable<Comments>> commentResponse = new CommentResponse<>();
         commentResponse.setCode(200);
         commentResponse.setMessage("评论数据获取成功！");
-        commentResponse.setData(commentRespository.findAllOderByDesc().get());
+        commentResponse.setData(commentRepository.findAllOderByDesc());
         return commentResponse;
     }
 
@@ -61,29 +61,29 @@ public class CommentService {
         Users users = getUserInfo();
         Posts posts = getPostInfo(post_id);
         Comments p = new Comments(comments.getTitle(), comments.getContent(),strStartTime, users, posts);
-        commentRespository.save(p);
+        commentRepository.save(p);
         return generatePostRes(200,"评论发表成功！",p);
     }
 
     public CommentResponse<Comments> findComment(Integer id) {
-        Optional<Comments> p = commentRespository.findById(id);
+        Optional<Comments> p = commentRepository.findById(id);
         if (!p.isPresent()){
             throw new BasePostException("该评论不存在！");
         }
-        commentRespository.save(p.get());
+        commentRepository.save(p.get());
         return generatePostRes(200,"评论查找成功！",p.get());
     }
 
     public CommentResponse<Comments> updateComment(Comments comments) {
         Users u = getUserInfo();
-        if (u.getId().equals(comments.getUsers().getId()) || u.getRole().equals("ROLE_ADMIN")) {
-            Optional<Comments> p = commentRespository.findById(comments.getId());
+        if (u.getId().equals(comments.getUsers().getId()) || u.getRole().equals("ROLE_MODERATE") || u.getRole().equals("ROLE_ADMIN")) {
+            Optional<Comments> p = commentRepository.findById(comments.getId());
             if (!p.isPresent()) {
                 throw new BasePostException("该评论不存在！");
             }
             p.get().setTitle(comments.getTitle());
             p.get().setContent(comments.getContent());
-            commentRespository.save(p.get());
+            commentRepository.save(p.get());
             return generatePostRes(200, "评论更新成功！", p.get());
         }
         throw new AuthorizationException("您没有更新此评论的权限！");
@@ -92,11 +92,11 @@ public class CommentService {
     public CommentResponse<Comments> deleteComment (Integer id){
         Users u = getUserInfo();
         if (u.getId().equals(id) || u.getRole().equals("ROLE_ADMIN")) {
-            Optional<Comments> p = commentRespository.findById(id);
+            Optional<Comments> p = commentRepository.findById(id);
             if (!p.isPresent()) {
                 throw new BasePostException("该评论不存在！");
             }
-            commentRespository.deleteById(id);
+            commentRepository.deleteById(id);
             return generatePostRes(200, "评论删除成功！", p.get());
         }
         throw new AuthorizationException("您没有删除此评论的权限！");

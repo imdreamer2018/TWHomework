@@ -36,12 +36,12 @@ public class Comments implements Serializable{
 
     @ManyToOne
     @NotNull
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "users_id")
     private Users users;
 
     @ManyToOne
     @NotNull
-    @JoinColumn(name = "post_id")
+    @JoinColumn(name = "posts_id")
     private Posts posts;
 
     public Comments(@NotNull String title, String content, String timestamp, @NotNull Users users, @NotNull Posts posts) {

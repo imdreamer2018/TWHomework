@@ -19,7 +19,7 @@ public class PostController {
 
     @GetMapping(path = "/posts")
     @ResponseBody
-    public PostResponse<Posts> getAllPosts(){
+    public PostResponse<Iterable<Posts>> getAllPosts(){
         return postService.getAllPosts();
     }
 

@@ -19,7 +19,7 @@ public class CommentController {
 
     @GetMapping(path = "/comments")
     @ResponseBody
-    public CommentResponse<Comments> getAllComments(){
+    public CommentResponse<Iterable<Comments>> getAllComments(){
         return commentService.getAllComments();
     }
 

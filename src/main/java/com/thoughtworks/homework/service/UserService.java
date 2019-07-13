@@ -80,6 +80,7 @@ public class UserService {
         if (redisService.get("Authentication_"+email) != null){
             redisService.clearRedisByKey("Authentication_"+email);
         }
+        redisService.clearRedisByKey("ResetPassword_"+email);
         return generateUserRes(200,"密码重置成功！",u.get());
     }
 
@@ -88,11 +89,25 @@ public class UserService {
         BaseResponse baseResponse = new BaseResponse();
         if (redisService.get("Authentication_"+u.getEmail()) == null){
             throw new UserException("您未登陆，或者登陆已失效");
-
         }
         redisService.clearRedisByKey("Authentication_"+u.getEmail());
         baseResponse.setCode(200);
         baseResponse.setMessage("您已退出登陆");
+        return baseResponse;
+    }
+
+    public BaseResponse changePermissions(String email,String role){
+        Optional<Users> u = userRepository.findUserByEmail(email);
+        if (!u.isPresent()){
+            throw new BaseUserException("用户不存在");
+        }
+        if (redisService.get("Authentication_"+u.get().getEmail()) != null){
+            redisService.clearRedisByKey("Authentication_"+u.get().getEmail());
+        }
+        u.get().setRole(role);
+        BaseResponse baseResponse = new BaseResponse();
+        baseResponse.setCode(200);
+        baseResponse.setMessage("您已提升至"+role+"权限");
         return baseResponse;
     }
 
