@@ -83,7 +83,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         }
         redisService.set("Authentication_"+jwtUser.getEmail(),token);
         response.setHeader("token",JwtTokenUtils.TOKEN_PREFIX + token);
-        response.getWriter().write("login success!");
+        response.getWriter().write("login success!\ntoken:"+JwtTokenUtils.TOKEN_PREFIX + token);
     }
 
     @Override
