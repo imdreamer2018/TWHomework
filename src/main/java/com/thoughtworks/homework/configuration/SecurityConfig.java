@@ -2,6 +2,7 @@ package com.thoughtworks.homework.configuration;
 
 import com.thoughtworks.homework.filter.JWTAuthenticationFilter;
 import com.thoughtworks.homework.filter.JWTAuthorizationFilter;
+import com.thoughtworks.homework.filter.SecurityBasicAuthFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -17,6 +18,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.core.env.Environment;
 
 import javax.sql.DataSource;
 
@@ -36,6 +38,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Qualifier("userDetailsServiceImpl")
     private UserDetailsService userDetailsService;
 
+    @Autowired
+    private Environment environment;
+
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder(){
         return new BCryptPasswordEncoder();
@@ -50,14 +55,37 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
                 .authorizeRequests()
-                    .antMatchers("/api/","/api/auth/**","/api/mail/**","/swagger-ui.html").permitAll()
-                    .anyRequest().authenticated()
+                    .antMatchers("/api/users","/api/users","/api/post","/api/posts","/api/redis/**").authenticated()
+                    .anyRequest().permitAll()
                     .and()
                     .addFilter(new JWTAuthenticationFilter(authenticationManager()))
                     .addFilter(new JWTAuthorizationFilter(authenticationManager()))
                     .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                     .and()
                     .exceptionHandling().authenticationEntryPoint(new AuthenticationEntryPoint());
+    }
+
+    @Bean
+    public SecurityBasicAuthFilter securityBasicAuthFilter(){
+        boolean enableSwaggerBasicAuth=false;
+        String dftUserName="admin",dftPass="123321";
+        if (environment!=null){
+            String enableAuth=environment.getProperty("swagger.basic.enable");
+            enableSwaggerBasicAuth=Boolean.valueOf(enableAuth);
+            if (enableSwaggerBasicAuth){
+                //如果开启basic验证,从配置文件中获取用户名和密码
+                String pUser=environment.getProperty("swagger.basic.username");
+                String pPass=environment.getProperty("swagger.basic.password");
+                if (pUser!=null&&!"".equals(pUser)){
+                    dftUserName=pUser;
+                }
+                if (pPass!=null&&!"".equals(pPass)){
+                    dftPass=pPass;
+                }
+            }
+        }
+        SecurityBasicAuthFilter securityBasicAuthFilter=new SecurityBasicAuthFilter(enableSwaggerBasicAuth,dftUserName,dftPass);
+        return securityBasicAuthFilter;
     }
 
     @Bean

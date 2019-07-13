@@ -34,11 +34,11 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = AuthorizationException.class)
     @ResponseBody
-    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    @ResponseStatus(HttpStatus.FORBIDDEN)
     public ErrorDTO AuthorizationHandler(HttpServletRequest req, AuthorizationException e) {
         ErrorDTO r = new ErrorDTO();
         r.setMessage(e.getMessage());
-        r.setCode(401);
+        r.setCode(403);
         return r;
     }
 

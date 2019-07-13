@@ -1,9 +1,10 @@
 package com.thoughtworks.homework.controller;
 
 import com.thoughtworks.homework.dto.UserResponse;
-import com.thoughtworks.homework.entity.User;
+import com.thoughtworks.homework.entity.Users;
 import com.thoughtworks.homework.service.UserService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,41 +31,39 @@ public class UserController {
 
     @GetMapping(path = "/users")
     @ResponseBody
-    public UserResponse<Iterable<User>> getAllUsers(){
+    public UserResponse<Iterable<Users>> getAllUsers(){
 
         return userService.getAllUsers();
     }
-
-//    @PostMapping(path = "/user")
-//    @ResponseBody
-//    @ResponseStatus(HttpStatus.CREATED)
-//    public UserResponse<User> addNewUser(@RequestBody User user) {
-//        return userService.creatUser(user);
-//    }
 
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<String> handleException(EntityNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
+    @ApiOperation(value = "查找用户",notes = "只有管理员才有权限")
     @GetMapping(path="/user")
+    @PreAuthorize("hasRole('ADMIN')")
     @ResponseBody
-    public UserResponse<User> getUser(@RequestParam String email){
+    public UserResponse<Users> getUser(@RequestParam String email){
         return userService.findUserByEmail(email);
     }
 
     @PutMapping(path="/user")
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    public UserResponse<User> updateUser(@RequestBody User user) {
-        return userService.updateUserByEmail(user);
+    public UserResponse<Users> updateUser(@RequestParam String username,
+                                          @RequestParam int age,
+                                          @RequestParam String gender) {
+        return userService.updateUser(username,age,gender);
     }
 
+    @ApiOperation(value = "删除用户",notes = "只有管理员才有权限")
     @DeleteMapping(path = "/user")
     @PreAuthorize("hasRole('ADMIN')")
     @ResponseBody
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public UserResponse<User> deleteUser(@RequestParam int id) {
+    public UserResponse<Users> deleteUser(@RequestParam int id) {
        return userService.deleteUser(id);
     }
 

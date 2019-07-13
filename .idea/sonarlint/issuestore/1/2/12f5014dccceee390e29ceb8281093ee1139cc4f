@@ -1,4 +1,6 @@
 
+Lsquid:S2140*")Use "java.util.Random.nextInt()" instead.(Ì¬¬¢øÿÿÿÿ8˜¢µŸ¾-
 Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8‘ÖÙ‰¾-
-Gsquid:S2140")Use "java.util.Random.nextInt()" instead.(Š‡Æð8”’©Š¾-
 8squid:S1700"Rename field "mailService"(¤ûéÀ8ÆÙÚ‰¾-
+Gsquid:S2140")Use "java.util.Random.nextInt()" instead.(Š‡Æð8”’©Š¾-
+Fsquid:S11485"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8»¯·Ÿ¾-

@@ -1,8 +1,7 @@
 package com.thoughtworks.homework.controller;
 
-import com.thoughtworks.homework.dto.AuthorizationResponse;
 import com.thoughtworks.homework.dto.UserResponse;
-import com.thoughtworks.homework.entity.User;
+import com.thoughtworks.homework.entity.Users;
 import com.thoughtworks.homework.service.AuthorizationService;
 import com.thoughtworks.homework.service.UserService;
 import io.swagger.annotations.Api;
@@ -23,32 +22,32 @@ public class AuthController {
     @Autowired
     private AuthorizationService authorizationService;
 
-    @ApiOperation(value = "Hello,World!")
     @PostMapping(path = "/")
     public @ResponseBody String index(){
         System.out.println("hello,world");
         return "Hello World!";
     }
 
-    @ApiOperation(value = "注册账户信息",notes = "需要注册验证码")
+    @ApiOperation(value = "个人信息",notes = "获取当前Token用户")
+    @GetMapping(path = "/me")
+    @ResponseBody
+    public UserResponse<Users> me(){
+        return userService.me();
+    }
+
+    @ApiOperation(value = "注册账户",notes = "需要注册验证码")
     @PostMapping(path = "/register")
     @ResponseBody
     @ResponseStatus(HttpStatus.CREATED)
-    public UserResponse<User> addNewUser(@RequestBody User user,@RequestParam String registerCode) {
-        return userService.creatUser(user,registerCode);
+    public UserResponse<Users> register(@RequestBody Users users, @RequestParam String registerCode) {
+        return userService.creatUser(users,registerCode);
     }
 
     @ApiOperation(value = "重置账户密码",notes = "需要重置验证码")
     @PostMapping(path = "/resetPassword")
     @ResponseBody
-    public UserResponse<User> resetPassword(@RequestParam String email,@RequestParam String password,@RequestParam String resetPasswordCode) {
+    public UserResponse<Users> resetPassword(@RequestParam String email, @RequestParam String password, @RequestParam String resetPasswordCode) {
         return userService.resetUserPassword(email,password,resetPasswordCode);
     }
 
-    @PostMapping(path = "/login")
-    @ResponseBody
-
-    public AuthorizationResponse login(@RequestParam String email, @RequestParam String password) {
-        return authorizationService.login(email,password);
-    }
 }

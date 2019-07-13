@@ -73,3 +73,17 @@ m
 =src/main/java/com/thoughtworks/homework/dto/MailResponse.java,9/1/914b86a0b67509c8051ef75a654818a956da0be4
 p
 @src/main/java/com/thoughtworks/homework/service/MailService.java,1/2/12f5014dccceee390e29ceb8281093ee1139cc4f
+w
+Gsrc/main/java/com/thoughtworks/homework/repository/PostRespository.java,7/b/7b147211bdbec7c5864b7220389d097f87261ba5
+x
+Hsrc/main/java/com/thoughtworks/homework/exception/BasePostException.java,1/e/1e6d7f7b4c3a93aaf4c251be6283cc82d8299826
+h
+8src/main/java/com/thoughtworks/homework/entity/Post.java,3/a/3a70bd59aff417a10e348d335a5c17661960065a
+p
+@src/main/java/com/thoughtworks/homework/service/PostService.java,3/d/3d0f4efea6b1f79998eb8364136f4bc68ed97dbe
+v
+Fsrc/main/java/com/thoughtworks/homework/controller/PostController.java,e/d/ed46b966bacbbd1fc244a931c165eccae0faaf7a
+k
+;src/main/java/com/thoughtworks/homework/Swagger2Config.java,e/5/e55568fb7a1806aea600148374fe974b84ff8045
+m
+=src/main/java/com/thoughtworks/homework/dto/PostResponse.java,3/a/3acc8e722253251441359b13083665d580ed2aa9

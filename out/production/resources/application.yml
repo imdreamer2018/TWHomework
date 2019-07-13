@@ -39,8 +39,6 @@ spring:
     properties.mail.smtp.starttls.enable: true
     properties.mail.smtp.starttls.required: true
     properties.mail.smtp.ssl.enable: true
-
-
 keyvault:
   client_id: ${AD_CLIENTID:''}
   client_secret: ${AD_SECRET:''}

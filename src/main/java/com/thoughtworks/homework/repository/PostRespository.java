@@ -1,12 +1,12 @@
 package com.thoughtworks.homework.repository;
 
-import com.thoughtworks.homework.entity.Post;
+import com.thoughtworks.homework.entity.Posts;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-public interface PostRespository extends JpaRepository<Post,Integer> {
+public interface PostRespository extends JpaRepository<Posts,Integer> {
 
-    Optional<Post> findPostById(Integer id);
-    Optional<Post> findPostsByUser(Integer id);
+    Optional<Posts> findPostById(Integer id);
+    Optional<Posts> findPostsByUser(Integer id);
 }

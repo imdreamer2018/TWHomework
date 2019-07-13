@@ -1,7 +1,7 @@
 package com.thoughtworks.homework.service;
 
 import com.thoughtworks.homework.dto.AuthorizationResponse;
-import com.thoughtworks.homework.entity.User;
+import com.thoughtworks.homework.entity.Users;
 import com.thoughtworks.homework.exception.AuthorizationException;
 import com.thoughtworks.homework.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class AuthorizationService {
     private PasswordEncoder passwordEncoder;
 
     public AuthorizationResponse login(String email, String password) throws AuthorizationException {
-        Optional<User> u = userRepository.findUserByEmail(email);
+        Optional<Users> u = userRepository.findUserByEmail(email);
         if (u.isPresent() && passwordEncoder.matches(password,u.get().getPassword())){
             AuthorizationResponse res = new AuthorizationResponse();
             res.setCode(200);
