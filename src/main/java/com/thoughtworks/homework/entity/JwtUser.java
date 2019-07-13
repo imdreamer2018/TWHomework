@@ -1,5 +1,6 @@
 package com.thoughtworks.homework.entity;
 
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -7,6 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
+@NoArgsConstructor
 public class JwtUser implements UserDetails {
 
     private Integer id;
@@ -14,10 +16,6 @@ public class JwtUser implements UserDetails {
     private String email;
     private String password;
     private Collection<? extends GrantedAuthority> authorities;
-
-    public JwtUser(){
-
-    }
 
     public JwtUser(Users users) {
         this.id = users.getId();

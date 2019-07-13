@@ -29,6 +29,7 @@ public class UserController {
         return "Hello World!";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping(path = "/users")
     @ResponseBody
     public UserResponse<Iterable<Users>> getAllUsers(){

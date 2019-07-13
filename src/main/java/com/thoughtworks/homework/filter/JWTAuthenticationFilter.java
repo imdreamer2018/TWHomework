@@ -3,6 +3,7 @@ package com.thoughtworks.homework.filter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.thoughtworks.homework.entity.JwtUser;
 import com.thoughtworks.homework.model.LoginUser;
+import com.thoughtworks.homework.service.RedisService;
 import com.thoughtworks.homework.utils.JwtTokenUtils;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -10,8 +11,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import javax.servlet.FilterChain;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,6 +27,8 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
     private ThreadLocal<Boolean> rememberMe = new ThreadLocal<>();
     private AuthenticationManager authenticationManager;
+
+    private RedisService redisService;
 
     public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
@@ -70,6 +76,12 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         // 返回创建成功的token
         // 但是这里创建的token只是单纯的token
         // 按照jwt的规定，最后请求的格式应该是 `Bearer token`
+        if(redisService==null){
+            ServletContext servletContext = request.getServletContext();
+            WebApplicationContext webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(servletContext);
+            redisService = webApplicationContext.getBean(RedisService.class);
+        }
+        redisService.set("Authentication_"+jwtUser.getEmail(),token);
         response.setHeader("token",JwtTokenUtils.TOKEN_PREFIX + token);
         response.getWriter().write("login success!");
     }

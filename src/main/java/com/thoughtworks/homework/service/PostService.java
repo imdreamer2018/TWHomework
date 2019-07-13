@@ -38,16 +38,12 @@ public class PostService {
         return postPostResponse;
     }
 
-    public PostResponse<Iterable<Posts>> getAllPosts(){
-        PostResponse<Iterable<Posts>> postResponse = new PostResponse<>();
-        postResponse.setCode(200);
-        postResponse.setMessage("文章数据获取成功！");
-        postResponse.setData(postRespository.findAll());
-        return postResponse;
+    public PostResponse<Posts> getAllPosts(){
+        return generatePostRes(200,"文章数据获取成功！",postRespository.findAllOderByDesc().get());
     }
 
     public PostResponse<Posts> newPost(Posts posts) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
         String strStartTime = sdf.format(new Date());
         Users users = getUserInfo();
         Posts p = new Posts(posts.getTitle(), posts.getContent(),strStartTime, users);
@@ -65,14 +61,18 @@ public class PostService {
     }
 
     public PostResponse<Posts> updatePost(Posts posts) {
-        Optional<Posts> p = postRespository.findById(posts.getId());
-        if (!p.isPresent()){
-            throw new BasePostException("该文章不存在！");
+        Users u = getUserInfo();
+        if (u.getId().equals(posts.getId()) || u.getRole().equals("ROLE_ADMIN")) {
+            Optional<Posts> p = postRespository.findById(posts.getId());
+            if (!p.isPresent()) {
+                throw new BasePostException("该文章不存在！");
+            }
+            p.get().setTitle(posts.getTitle());
+            p.get().setContent(posts.getContent());
+            postRespository.save(p.get());
+            return generatePostRes(200, "文章更新成功！", p.get());
         }
-        p.get().setTitle(posts.getTitle());
-        p.get().setContent(posts.getContent());
-        postRespository.save(p.get());
-        return generatePostRes(200,"文章更新成功！",p.get());
+        throw new AuthorizationException("您没有修改此文章的权限！");
     }
 
     public PostResponse<Posts> deletePost(Integer id) {

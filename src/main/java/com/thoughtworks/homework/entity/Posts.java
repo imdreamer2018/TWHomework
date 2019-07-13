@@ -1,10 +1,8 @@
 package com.thoughtworks.homework.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -30,8 +28,6 @@ public class Posts implements Serializable {
     private String content;
 
     @Column(name = "timestamp")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private String timestamp;
 
     @ManyToOne

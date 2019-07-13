@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class MailService {
 
     @Autowired
-    private IMailServiceImpl mailService;
+    private IMailServiceImpl iMailService;
 
     @Autowired
     private RedisService redisService;
@@ -23,7 +23,7 @@ public class MailService {
                 "<div style=\"margin-top: 35px;\">谢谢！</div>" +
                 "</div>";
         try{
-            mailService.sendHtmlMail(email,"注册验证码",message);
+            iMailService.sendHtmlMail(email,"注册验证码",message);
         }catch (Exception e){
             e.printStackTrace();
             MailResponse mailResponse = new MailResponse();
@@ -48,7 +48,7 @@ public class MailService {
                 "<div style=\"margin-top: 35px;\">谢谢！</div>" +
                 "</div>";
         try{
-            mailService.sendHtmlMail(email,"重置密码验证",message);
+            iMailService.sendHtmlMail(email,"重置密码验证",message);
         }catch (Exception e){
             e.printStackTrace();
             MailResponse mailResponse = new MailResponse();

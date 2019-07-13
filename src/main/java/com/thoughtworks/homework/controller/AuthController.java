@@ -2,7 +2,6 @@ package com.thoughtworks.homework.controller;
 
 import com.thoughtworks.homework.dto.UserResponse;
 import com.thoughtworks.homework.entity.Users;
-import com.thoughtworks.homework.service.AuthorizationService;
 import com.thoughtworks.homework.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -18,9 +17,6 @@ public class AuthController {
 
     @Autowired
     private UserService userService;
-
-    @Autowired
-    private AuthorizationService authorizationService;
 
     @PostMapping(path = "/")
     public @ResponseBody String index(){
