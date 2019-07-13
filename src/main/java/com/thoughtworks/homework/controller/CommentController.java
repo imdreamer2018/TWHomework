@@ -41,7 +41,7 @@ public class CommentController {
         return commentService.updateComment(comments);
     }
 
-    @ApiOperation(value = "删除文章",notes = "只有作者和管理员可以删除")
+    @ApiOperation(value = "删除评论",notes = "只有作者和管理员可以删除")
     @DeleteMapping(path = "/comment")
     @ResponseBody
     public CommentResponse<Comments> deletecomment(@RequestParam Integer id){

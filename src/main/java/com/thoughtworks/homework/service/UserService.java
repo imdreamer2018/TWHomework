@@ -1,8 +1,10 @@
 package com.thoughtworks.homework.service;
 
+import com.thoughtworks.homework.dto.BaseResponse;
 import com.thoughtworks.homework.dto.UserResponse;
 import com.thoughtworks.homework.entity.Users;
 import com.thoughtworks.homework.exception.BaseUserException;
+import com.thoughtworks.homework.exception.UserException;
 import com.thoughtworks.homework.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -75,7 +77,23 @@ public class UserService {
         }
         u.get().setPassword(passwordEncoder.encode(password));
         userRepository.save(u.get());
+        if (redisService.get("Authentication_"+email) != null){
+            redisService.clearRedisByKey("Authentication_"+email);
+        }
         return generateUserRes(200,"密码重置成功！",u.get());
+    }
+
+    public BaseResponse logout(){
+        Users u = getUserInfo();
+        BaseResponse baseResponse = new BaseResponse();
+        if (redisService.get("Authentication_"+u.getEmail()) == null){
+            throw new UserException("您未登陆，或者登陆已失效");
+
+        }
+        redisService.clearRedisByKey("Authentication_"+u.getEmail());
+        baseResponse.setCode(200);
+        baseResponse.setMessage("您已退出登陆");
+        return baseResponse;
     }
 
     public UserResponse<Users> findUserByEmail (String email) throws BaseUserException {

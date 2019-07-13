@@ -1,5 +1,6 @@
 package com.thoughtworks.homework.controller;
 
+import com.thoughtworks.homework.dto.BaseResponse;
 import com.thoughtworks.homework.dto.UserResponse;
 import com.thoughtworks.homework.entity.Users;
 import com.thoughtworks.homework.service.UserService;
@@ -46,4 +47,10 @@ public class AuthController {
         return userService.resetUserPassword(email,password,resetPasswordCode);
     }
 
+    @ApiOperation(value = "注销登陆")
+    @PostMapping(path = "/logout")
+    @ResponseBody
+    public BaseResponse logout(){
+        return userService.logout();
+    }
 }

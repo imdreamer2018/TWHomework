@@ -43,7 +43,7 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
         }
         String redisToken = (String) redisService.get("Authentication_"+email);
         // 如果请求头中没有Authorization信息则直接放行了
-        if (!redisToken.equals(token)) {
+        if (redisToken==null || !redisToken.equals(token)) {
             chain.doFilter(request, response);
             return;
         }
