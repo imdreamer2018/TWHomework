@@ -1,4 +1,4 @@
 
-¾%squid:RedundantThrowsDeclarationCheckQ"€Remove the declaration of thrown exception 'com.thoughtworks.homework.exception.BaseUserException' which is a runtime exception.(ªçÀøúÿÿÿÿ8ØÆ© ¾-
-¾%squid:RedundantThrowsDeclarationCheckE"€Remove the declaration of thrown exception 'com.thoughtworks.homework.exception.BaseUserException' which is a runtime exception.(´ÙÏşÿÿÿÿ8ØÆ© ¾-
-¾%squid:RedundantThrowsDeclarationCheckc"€Remove the declaration of thrown exception 'com.thoughtworks.homework.exception.BaseUserException' which is a runtime exception.(ÛíÓÍøÿÿÿÿ8ØÆ© ¾-
+¾%squid:RedundantThrowsDeclarationCheck8"€Remove the declaration of thrown exception 'com.thoughtworks.homework.exception.BaseUserException' which is a runtime exception.(£˜¤çûÿÿÿÿ8ï€Ì¾-
+¹%squid:RedundantThrowsDeclarationCheck0"€Remove the declaration of thrown exception 'com.thoughtworks.homework.exception.BaseUserException' which is a runtime exception.(™½û¦8ï€Ì¾-
+¾%squid:RedundantThrowsDeclarationCheckA"€Remove the declaration of thrown exception 'com.thoughtworks.homework.exception.BaseUserException' which is a runtime exception.(¿œĞİúÿÿÿÿ8ï€Ì¾-

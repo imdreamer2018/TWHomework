@@ -3,6 +3,7 @@ package com.thoughtworks.homework.service;
 import com.thoughtworks.homework.dto.BaseResponse;
 import com.thoughtworks.homework.dto.UserResponse;
 import com.thoughtworks.homework.entity.Users;
+import com.thoughtworks.homework.exception.AuthorizationException;
 import com.thoughtworks.homework.exception.BaseUserException;
 import com.thoughtworks.homework.exception.UserException;
 import com.thoughtworks.homework.repository.UserRepository;
@@ -93,6 +94,9 @@ public class AuthService {
         Optional<Users> u = userRepository.findUserByEmail(email);
         if (!u.isPresent()){
             throw new BaseUserException("用户不存在");
+        }
+        if (u.get().getRole().equals("ROLE_ADMIN") || role.equals("ROLE_ADMIN")){
+            throw new AuthorizationException("无法更改管理员权限");
         }
         if (redisService.get("Authentication_"+u.get().getEmail()) != null){
             redisService.clearRedisByKey("Authentication_"+u.get().getEmail());

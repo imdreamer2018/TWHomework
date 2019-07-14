@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface CommentRepository extends JpaRepository<Comments,Integer> {
 
-    @Query(value = "select * from Comments order by timestamp desc ",nativeQuery = true)
+    @Query(value = "select * from comments order by timestamp desc ",nativeQuery = true)
     Iterable<Comments> findAllOderByDesc();
 }
