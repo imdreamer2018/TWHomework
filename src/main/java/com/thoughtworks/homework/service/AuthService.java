@@ -29,8 +29,8 @@ public class AuthService {
 
     private Users getUserInfo() {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        Optional<Users> user = userRepository.findUserByEmail((String) principal);
-        return user.get();
+        Optional<Users> user = userRepository.findUserByEmail( principal.toString());
+        return user.orElseGet(Users::new);
     }
 
     private UserResponse<Users> generateUserRes(int code, String message, Users user){
@@ -43,7 +43,7 @@ public class AuthService {
 
     public UserResponse<Users> me(){
         Users users = getUserInfo();
-        return generateUserRes(200,"数据获取成功！",users);
+        return generateUserRes(200,"当前用户数据获取成功！",users);
     }
 
     public UserResponse<Users> register(Users users, String registerCode) {
@@ -53,7 +53,7 @@ public class AuthService {
         }
         Optional<Users> u = userRepository.findUserByEmail(users.getEmail());
         if (u.isPresent()) {
-            throw new BaseUserException("邮箱已存在");
+            throw new BaseUserException("邮箱已存在!");
         }
         Users n = new Users(users.getUsername(), users.getEmail(),passwordEncoder.encode(users.getPassword()), users.getAge(), users.getGender());
         userRepository.save(n);
@@ -67,7 +67,7 @@ public class AuthService {
         }
         Optional<Users> u = userRepository.findUserByEmail(email);
         if (!u.isPresent()){
-            throw new BaseUserException("邮箱不存在");
+            throw new BaseUserException("邮箱不存在！");
         }
         u.get().setPassword(passwordEncoder.encode(password));
         userRepository.save(u.get());
@@ -81,7 +81,7 @@ public class AuthService {
     public BaseResponse logout(){
         Users u = getUserInfo();
         BaseResponse baseResponse = new BaseResponse();
-        if (redisService.get("Authentication_"+u.getEmail()) == null){
+        if (u.getEmail() == null || redisService.get("Authentication_"+u.getEmail()) == null){
             throw new UserException("您未登陆，或者登陆已失效");
         }
         redisService.clearRedisByKey("Authentication_"+u.getEmail());

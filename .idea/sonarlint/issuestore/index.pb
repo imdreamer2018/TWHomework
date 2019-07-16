@@ -109,3 +109,5 @@ p
 mvnw.cmd,1/f/1f1763f358c257ea3515417352b82b0165647ad1
 4
 mvnw,5/d/5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d
+t
+Dsrc/test/java/com/thoughtworks/homework/service/AuthServiceTest.java,1/5/155ed36dafe2697402fbe1fa07a931aede304917

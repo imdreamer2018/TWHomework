@@ -50,7 +50,7 @@ public class UserService {
         if(!user.isPresent()){
             throw new BaseUserException("用户不存在");
         }
-        return generateUserRes(200,"查找成功!",user.get());
+        return generateUserRes(200,"查找成功！",user.get());
     }
 
     public UserResponse<Users> updateUser(String username, int age, String gender) throws BaseUserException {
@@ -59,7 +59,7 @@ public class UserService {
         u.setAge(age);
         u.setGender(gender);
         userRepository.save(u);
-        return generateUserRes(200,"用户名修改成功",u);
+        return generateUserRes(200,"用户名修改成功！",u);
     }
 
     public UserResponse<Users> deleteUser(int id) throws BaseUserException {

@@ -1,9 +1,9 @@
 package com.thoughtworks.homework.controller;
 
 import com.thoughtworks.homework.dto.BaseResponse;
-import com.thoughtworks.homework.dto.LoginRequest;
 import com.thoughtworks.homework.dto.UserResponse;
 import com.thoughtworks.homework.entity.Users;
+import com.thoughtworks.homework.model.LoginUser;
 import com.thoughtworks.homework.service.AuthService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -44,7 +44,7 @@ public class AuthController {
 
     @ApiOperation(value = "登陆账户")
     @PostMapping(path = "/login")
-    public String login(@RequestBody LoginRequest loginRequest){
+    public String login(@RequestBody LoginUser loginUser){
         return "login";
     }
 

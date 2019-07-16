@@ -75,12 +75,12 @@ public class CommentService {
     }
 
     public CommentResponse<Comments> updateComment(Comments comments) {
+        Optional<Comments> p = commentRepository.findById(comments.getId());
+        if (!p.isPresent()) {
+            throw new BasePostException("该评论不存在！");
+        }
         Users u = getUserInfo();
         if (u.getId().equals(comments.getUsers().getId()) || u.getRole().equals("ROLE_MODERATE") || u.getRole().equals("ROLE_ADMIN")) {
-            Optional<Comments> p = commentRepository.findById(comments.getId());
-            if (!p.isPresent()) {
-                throw new BasePostException("该评论不存在！");
-            }
             p.get().setTitle(comments.getTitle());
             p.get().setContent(comments.getContent());
             commentRepository.save(p.get());
@@ -90,12 +90,12 @@ public class CommentService {
     }
 
     public CommentResponse<Comments> deleteComment (Integer id){
+        Optional<Comments> p = commentRepository.findById(id);
+        if (!p.isPresent()) {
+            throw new BasePostException("该评论不存在！");
+        }
         Users u = getUserInfo();
-        if (u.getId().equals(id) || u.getRole().equals("ROLE_ADMIN")) {
-            Optional<Comments> p = commentRepository.findById(id);
-            if (!p.isPresent()) {
-                throw new BasePostException("该评论不存在！");
-            }
+        if (u.getId().equals(p.get().getUsers().getId()) || u.getId().equals(p.get().getPosts().getId()) || u.getRole().equals("ROLE_ADMIN")) {
             commentRepository.deleteById(id);
             return generatePostRes(200, "评论删除成功！", p.get());
         }

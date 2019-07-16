@@ -65,12 +65,12 @@ public class PostService {
     }
 
     public PostResponse<Posts> updatePost(Posts posts) {
+        Optional<Posts> p = postRepository.findById(posts.getId());
+        if (!p.isPresent()) {
+            throw new BasePostException("该文章不存在！");
+        }
         Users u = getUserInfo();
-        if (u.getId().equals(posts.getId()) || u.getRole().equals("ROLE_ADMIN")) {
-            Optional<Posts> p = postRepository.findById(posts.getId());
-            if (!p.isPresent()) {
-                throw new BasePostException("该文章不存在！");
-            }
+        if (u.getId().equals(p.get().getUsers().getId()) || u.getRole().equals("ROLE_ADMIN")) {
             p.get().setTitle(posts.getTitle());
             p.get().setContent(posts.getContent());
             postRepository.save(p.get());
@@ -80,12 +80,12 @@ public class PostService {
     }
 
     public PostResponse<Posts> deletePost(Integer id) {
+        Optional<Posts> p = postRepository.findById(id);
+        if (!p.isPresent()){
+            throw new BasePostException("该文章不存在！");
+        }
         Users u = getUserInfo();
-        if (u.getId().equals(id) || u.getRole().equals("ROLE_ADMIN")){
-            Optional<Posts> p = postRepository.findById(id);
-            if (!p.isPresent()){
-                throw new BasePostException("该文章不存在！");
-            }
+        if (u.getId().equals(p.get().getUsers().getId()) || u.getRole().equals("ROLE_ADMIN")){
             postRepository.deleteById(id);
             return generatePostRes(200,"文章删除成功！",p.get());
         }

@@ -23,7 +23,7 @@ public class RedisService {
         vo.set(key, value);
     }
 
-    void set_timeout(String key, Object value, int minute) {
+    public void set_timeout(String key, Object value, int minute) {
         ValueOperations<String, Object> vo = redisTemplate.opsForValue();
         vo.set(key,value,minute, TimeUnit.MINUTES);
     }

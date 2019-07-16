@@ -81,7 +81,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
             WebApplicationContext webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(servletContext);
             redisService = webApplicationContext.getBean(RedisService.class);
         }
-        redisService.set("Authentication_"+jwtUser.getEmail(),token);
+        redisService.set_timeout("Authentication_"+jwtUser.getEmail(),token,isRemember?10080:60);
         response.setHeader("token",JwtTokenUtils.TOKEN_PREFIX + token);
         response.getWriter().write("login success!\ntoken:"+JwtTokenUtils.TOKEN_PREFIX + token);
     }
