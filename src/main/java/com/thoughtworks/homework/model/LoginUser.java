@@ -11,9 +11,4 @@ public class LoginUser {
     private String password;
     private Boolean rememberMe;
 
-    public LoginUser(String email, String password, Boolean rememberMe) {
-        this.email = email;
-        this.password = password;
-        this.rememberMe = rememberMe;
-    }
 }

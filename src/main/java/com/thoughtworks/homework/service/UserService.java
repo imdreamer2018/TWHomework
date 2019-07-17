@@ -45,7 +45,7 @@ public class UserService {
         return u;
     }
 
-    public UserResponse<Users> findUserByEmail (String email) throws BaseUserException {
+    public UserResponse<Users> findUserByEmail (String email) {
         Optional<Users> user = userRepository.findUserByEmail(email);
         if(!user.isPresent()){
             throw new BaseUserException("用户不存在");
@@ -53,7 +53,7 @@ public class UserService {
         return generateUserRes(200,"查找成功！",user.get());
     }
 
-    public UserResponse<Users> updateUser(String username, int age, String gender) throws BaseUserException {
+    public UserResponse<Users> updateUser(String username, int age, String gender) {
         Users u = getUserInfo();
         u.setUsername(username);
         u.setAge(age);
@@ -62,7 +62,7 @@ public class UserService {
         return generateUserRes(200,"用户名修改成功！",u);
     }
 
-    public UserResponse<Users> deleteUser(int id) throws BaseUserException {
+    public UserResponse<Users> deleteUser(int id) {
         Optional<Users> u=userRepository.findById(id);
         if(u.isPresent()){
             userRepository.deleteById(id);
