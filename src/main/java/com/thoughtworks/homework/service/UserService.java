@@ -5,7 +5,6 @@ import com.thoughtworks.homework.entity.Users;
 import com.thoughtworks.homework.exception.BaseUserException;
 import com.thoughtworks.homework.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -23,11 +22,8 @@ public class UserService {
     @Autowired
     private RedisService redisService;
 
-    private Users getUserInfo() {
-        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        Optional<Users> user = userRepository.findUserByEmail((String) principal);
-        return user.get();
-    }
+    @Autowired
+    private CurrentUserInfoService currentUserInfoService;
 
     private UserResponse<Users> generateUserRes(int code, String message, Users user){
         UserResponse<Users> u = new UserResponse<>();
@@ -54,7 +50,7 @@ public class UserService {
     }
 
     public UserResponse<Users> updateUser(String username, int age, String gender) {
-        Users u = getUserInfo();
+        Users u = currentUserInfoService.getUserInfo();
         u.setUsername(username);
         u.setAge(age);
         u.setGender(gender);

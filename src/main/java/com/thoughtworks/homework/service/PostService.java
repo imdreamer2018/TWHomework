@@ -8,7 +8,6 @@ import com.thoughtworks.homework.exception.BasePostException;
 import com.thoughtworks.homework.repository.PostRepository;
 import com.thoughtworks.homework.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
@@ -24,11 +23,8 @@ public class PostService {
     @Autowired
     private PostRepository postRepository;
 
-    private Users getUserInfo() {
-        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        Optional<Users> user = userRepository.findUserByEmail((String) principal);
-        return user.get();
-    }
+    @Autowired
+    private CurrentUserInfoService currentUserInfoService;
 
     private PostResponse<Posts> generatePostRes(int code, String message, Posts data){
         PostResponse<Posts> postPostResponse = new PostResponse<>();
@@ -49,7 +45,7 @@ public class PostService {
     public PostResponse<Posts> newPost(Posts posts) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
         String strStartTime = sdf.format(new Date());
-        Users users = getUserInfo();
+        Users users = currentUserInfoService.getUserInfo();
         Posts p = new Posts(posts.getTitle(), posts.getContent(),strStartTime, users);
         postRepository.save(p);
         return generatePostRes(200,"文章发表成功！",p);
@@ -69,7 +65,7 @@ public class PostService {
         if (!p.isPresent()) {
             throw new BasePostException("该文章不存在！");
         }
-        Users u = getUserInfo();
+        Users u = currentUserInfoService.getUserInfo();
         if (u.getId().equals(p.get().getUsers().getId()) || u.getRole().equals("ROLE_ADMIN")) {
             p.get().setTitle(posts.getTitle());
             p.get().setContent(posts.getContent());
@@ -84,7 +80,7 @@ public class PostService {
         if (!p.isPresent()){
             throw new BasePostException("该文章不存在！");
         }
-        Users u = getUserInfo();
+        Users u = currentUserInfoService.getUserInfo();
         if (u.getId().equals(p.get().getUsers().getId()) || u.getRole().equals("ROLE_ADMIN")){
             postRepository.deleteById(id);
             return generatePostRes(200,"文章删除成功！",p.get());

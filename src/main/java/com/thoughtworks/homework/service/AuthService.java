@@ -8,7 +8,6 @@ import com.thoughtworks.homework.exception.BaseUserException;
 import com.thoughtworks.homework.exception.UserException;
 import com.thoughtworks.homework.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -26,12 +25,8 @@ public class AuthService {
     @Autowired
     private RedisService redisService;
 
-
-    private Users getUserInfo() {
-        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        Optional<Users> user = userRepository.findUserByEmail( principal.toString());
-        return user.orElseGet(Users::new);
-    }
+    @Autowired
+    private CurrentUserInfoService currentUserInfoService;
 
     private UserResponse<Users> generateUserRes(int code, String message, Users user){
         UserResponse<Users> u = new UserResponse<>();
@@ -42,7 +37,7 @@ public class AuthService {
     }
 
     public UserResponse<Users> me(){
-        Users users = getUserInfo();
+        Users users = currentUserInfoService.getUserInfo();
         return generateUserRes(200,"当前用户数据获取成功！",users);
     }
 
@@ -79,7 +74,7 @@ public class AuthService {
     }
 
     public BaseResponse logout(){
-        Users u = getUserInfo();
+        Users u = currentUserInfoService.getUserInfo();
         BaseResponse baseResponse = new BaseResponse();
         if (u.getEmail() == null || redisService.get("Authentication_"+u.getEmail()) == null){
             throw new UserException("您未登陆，或者登陆已失效");

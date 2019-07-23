@@ -10,7 +10,6 @@ import com.thoughtworks.homework.repository.CommentRepository;
 import com.thoughtworks.homework.repository.PostRepository;
 import com.thoughtworks.homework.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
@@ -29,14 +28,12 @@ public class CommentService {
     @Autowired
     private CommentRepository commentRepository;
 
-    private Users getUserInfo() {
-        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        Optional<Users> user = userRepository.findUserByEmail((String) principal);
-        return user.get();
-    }
-    private Posts getPostInfo(int post_id) {
-        Optional<Posts> posts = postRepository.findById(post_id);
-        return posts.get();
+    @Autowired
+    protected CurrentUserInfoService currentUserInfoService;
+
+    private Posts getPostInfo(int postId) {
+        Optional<Posts> posts = postRepository.findById(postId);
+        return posts.orElseGet(Posts::new);
     }
 
     private CommentResponse<Comments> generatePostRes(int code, String message, Comments data){
@@ -55,11 +52,11 @@ public class CommentService {
         return commentResponse;
     }
 
-    public CommentResponse<Comments> newComment(int post_id,Comments comments) {
+    public CommentResponse<Comments> newComment(int postId,Comments comments) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
         String strStartTime = sdf.format(new Date());
-        Users users = getUserInfo();
-        Posts posts = getPostInfo(post_id);
+        Users users = currentUserInfoService.getUserInfo();
+        Posts posts = getPostInfo(postId);
         Comments p = new Comments(comments.getTitle(), comments.getContent(),strStartTime, users, posts);
         commentRepository.save(p);
         return generatePostRes(200,"评论发表成功！",p);
@@ -79,7 +76,7 @@ public class CommentService {
         if (!p.isPresent()) {
             throw new BasePostException("该评论不存在！");
         }
-        Users u = getUserInfo();
+        Users u = currentUserInfoService.getUserInfo();
         if (u.getId().equals(comments.getUsers().getId()) || u.getRole().equals("ROLE_MODERATE") || u.getRole().equals("ROLE_ADMIN")) {
             p.get().setTitle(comments.getTitle());
             p.get().setContent(comments.getContent());
@@ -94,7 +91,7 @@ public class CommentService {
         if (!p.isPresent()) {
             throw new BasePostException("该评论不存在！");
         }
-        Users u = getUserInfo();
+        Users u = currentUserInfoService.getUserInfo();
         if (u.getId().equals(p.get().getUsers().getId()) || u.getId().equals(p.get().getPosts().getId()) || u.getRole().equals("ROLE_ADMIN")) {
             commentRepository.deleteById(id);
             return generatePostRes(200, "评论删除成功！", p.get());

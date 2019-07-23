@@ -44,6 +44,9 @@ public class AuthServiceTest {
     private RedisService redisService;
 
     @Mock
+    private CurrentUserInfoService currentUserInfoService;
+
+    @Mock
     private UserRepository userRepository;
 
     private static Users ZHANG_SAN = new Users("yangqian","imdreamer.yq@qq.com","123",18,"male");
@@ -70,15 +73,17 @@ public class AuthServiceTest {
 
     @Test
     public void should_return_userInfo_json_when_get_current_user_from_token(){
-        Authentication authentication = Mockito.mock(Authentication.class);
+//        Authentication authentication = Mockito.mock(Authentication.class);
+//
+//        SecurityContext securityContext = Mockito.mock(SecurityContext.class);
+//
+//        Mockito.when(securityContext.getAuthentication()).thenReturn(authentication);
+//
+//        SecurityContextHolder.setContext(securityContext);
+//
+//        Mockito.when(authentication.getPrincipal()).thenReturn("imdreamer.yq@qq.com");
 
-        SecurityContext securityContext = Mockito.mock(SecurityContext.class);
-
-        Mockito.when(securityContext.getAuthentication()).thenReturn(authentication);
-
-        SecurityContextHolder.setContext(securityContext);
-
-        Mockito.when(authentication.getPrincipal()).thenReturn("imdreamer.yq@qq.com");
+        when(currentUserInfoService.getUserInfo()).thenReturn(ZHANG_SAN);
 
         UserResponse<Users> usersUserResponse = authService.me();
 
@@ -154,9 +159,7 @@ public class AuthServiceTest {
     @Test
     public void should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid(){
 
-        Mockito.when(authentication.getPrincipal()).thenReturn("imdreamer.yq@qq.com");
-
-        when(userRepository.findUserByEmail(anyString())).thenReturn(Optional.empty());
+        when(currentUserInfoService.getUserInfo()).thenReturn(new Users());
 
         when(redisService.get(anyString())).thenReturn(Optional.empty());
 
@@ -168,9 +171,11 @@ public class AuthServiceTest {
     @Test
     public void should_return_baseResponse_json_when_logout_successful(){
 
-        Mockito.when(authentication.getPrincipal()).thenReturn("imdreamer.yq@qq.com");
+        //Mockito.when(authentication.getPrincipal()).thenReturn("imdreamer.yq@qq.com");
 
-        when(userRepository.findUserByEmail(anyString())).thenReturn(Optional.ofNullable(ZHANG_SAN));
+        //when(userRepository.findUserByEmail(anyString())).thenReturn(Optional.ofNullable(ZHANG_SAN));
+
+        when(currentUserInfoService.getUserInfo()).thenReturn(ZHANG_SAN);
 
         when(redisService.get(anyString())).thenReturn("dfadfasd");
 
