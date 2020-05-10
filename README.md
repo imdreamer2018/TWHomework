@@ -1,1 +1,1 @@
-This is SprintBoot Test 
+This is blog API homework by springBoot.
