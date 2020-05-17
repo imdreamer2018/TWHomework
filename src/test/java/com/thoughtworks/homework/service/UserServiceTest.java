@@ -5,6 +5,7 @@ import com.thoughtworks.homework.entity.Users;
 import com.thoughtworks.homework.exception.BaseUserException;
 import com.thoughtworks.homework.repository.UserRepository;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -37,11 +38,28 @@ public class UserServiceTest {
     @Mock
     private UserRepository userRepository;
 
+    @Mock
+    private CurrentUserInfoService currentUserInfoService;
+
+    @Mock
+    Authentication authentication;
+
+    @Mock
+    SecurityContext securityContext;
 
     private static Users ZHANG_SAN = new Users("yangqian","imdreamer.yq@qq.com","123",18,"male");
 
     private static Users LI_SI = new Users("zhangsan","zhangshan@qq.com","123",18,"male");
 
+
+    @BeforeEach
+    public void mock_current_userInfo(){
+
+        Mockito.when(securityContext.getAuthentication()).thenReturn(authentication);
+
+        SecurityContextHolder.setContext(securityContext);
+
+    }
 
     @Test
     public void should_return_usersInfo_json_when_get_users(){
@@ -77,13 +95,8 @@ public class UserServiceTest {
     @Test
     public void should_return_userInfo_json_when_update_user_by_token_userInfo() throws BaseUserException {
 
-        Authentication authentication = Mockito.mock(Authentication.class);
-        SecurityContext securityContext = Mockito.mock(SecurityContext.class);
-        Mockito.when(securityContext.getAuthentication()).thenReturn(authentication);
-        SecurityContextHolder.setContext(securityContext);
-        Mockito.when(authentication.getPrincipal()).thenReturn("imdreamer.yq@qq.com");
 
-        when(userRepository.findUserByEmail(anyString())).thenReturn(Optional.ofNullable(ZHANG_SAN));
+        when(currentUserInfoService.getUserInfo()).thenReturn(ZHANG_SAN);
 
         UserResponse<Users> u = userService.updateUser("zhangsan",18,"male");
 

@@ -1,14 +1,7 @@
 buildscript {
     repositories {
-        maven {
-            url "https://ci.otr.mercedes-benz.com.cn:8443/repository/mvngroup/"
-            credentials {
-                username = repoUser
-                password = repoPassword
-            }
-        }
-        maven { url "https://plugins.gradle.org/m2/" }
         mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.6.RELEASE")
@@ -27,13 +20,6 @@ bootJar {
 }
 
 repositories {
-    maven {
-        url "https://ci.otr.mercedes-benz.com.cn:8443/repository/mvngroup/"
-        credentials {
-            username = repoUser
-            password = repoPassword
-        }
-    }
     mavenCentral()
 }
 
@@ -54,7 +40,8 @@ dependencies {
     // https://mvnrepository.com/artifact/org.flywaydb/flyway-core
     compile group: 'org.flywaydb', name: 'flyway-core', version: '5.2.4'
 
-    compile 'otr:keyvault-spring-boot-starter:springboot-1.5'
+    // https://mvnrepository.com/artifact/com.microsoft.azure/azure-keyvault-secrets-spring-boot-starter
+    runtime group: 'com.microsoft.azure', name: 'azure-keyvault-secrets-spring-boot-starter', version: '2.2.4'
 
     compileOnly "org.springframework.boot:spring-boot-configuration-processor"
 
@@ -95,6 +82,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
     compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+
+    // https://mvnrepository.com/artifact/com.github.javafaker/javafaker
+    compile group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
 
     // https://mvnrepository.com/artifact/junit/junit
     testCompile group: 'junit', name: 'junit', version: '4.12'

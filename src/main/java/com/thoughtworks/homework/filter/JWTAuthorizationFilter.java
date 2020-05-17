@@ -47,6 +47,7 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
             chain.doFilter(request, response);
             return;
         }
+
         // 如果请求头中有token，则进行解析，并且设置认证信息
         SecurityContextHolder.getContext().setAuthentication(getAuthentication(tokenHeader));
         super.doFilterInternal(request, response, chain);

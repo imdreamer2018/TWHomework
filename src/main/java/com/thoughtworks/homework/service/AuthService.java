@@ -1,5 +1,6 @@
 package com.thoughtworks.homework.service;
 
+import com.github.javafaker.Faker;
 import com.thoughtworks.homework.dto.BaseResponse;
 import com.thoughtworks.homework.dto.UserResponse;
 import com.thoughtworks.homework.entity.Users;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Locale;
 import java.util.Optional;
 
 @Service
@@ -53,6 +55,32 @@ public class AuthService {
         Users n = new Users(users.getUsername(), users.getEmail(),passwordEncoder.encode(users.getPassword()), users.getAge(), users.getGender());
         userRepository.save(n);
         return generateUserRes(200,"添加用户成功！",n);
+    }
+
+    public BaseResponse registerUsersByFaker(int generateUserNumber) {
+        Faker faker = new Faker(new Locale("zh-CN"));
+
+        String[] genderItems = {"male","female"};
+
+        for (int i = 0; i <generateUserNumber; i++) {
+            String name = faker.name().fullName();
+            String email = faker.bothify("????##@gmail.com");
+            String password = "$2a$10$xF7bboh4TVQRDcA0QoyzzeKmaIcXVRjyNfnW3rvFSZSxroqDmcGyC";
+            int age = Integer.parseInt(faker.numerify("##"));
+            String gender = genderItems[Math.random()>0.5?1:0];
+
+            Optional<Users> u = userRepository.findUserByEmail(email);
+            if (u.isPresent()) {
+                throw new BaseUserException("邮箱已存在!");
+            }
+            Users n = new Users(name,email,password,age,gender);
+            userRepository.save(n);
+        }
+        BaseResponse baseResponse = new BaseResponse();
+        baseResponse.setCode(200);
+        baseResponse.setMessage("注册随机用户成功！");
+        return baseResponse;
+
     }
 
     public UserResponse<Users> resetUserPassword(String email, String password, String resetPasswordCode) {

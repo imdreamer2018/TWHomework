@@ -1,9 +1,12 @@
 package com.thoughtworks.homework.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -22,10 +25,6 @@ public class Comments implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @NotNull
-    @Column(name = "title")
-    private String title;
-
     @Column(name = "content")
     private String content;
 
@@ -34,22 +33,33 @@ public class Comments implements Serializable{
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private String timestamp;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @NotNull
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
     @JoinColumn(name = "users_id")
     private Users users;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @NotNull
     @JoinColumn(name = "posts_id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
     private Posts posts;
 
-    public Comments(@NotNull String title, String content, String timestamp, @NotNull Users users, @NotNull Posts posts) {
-        this.title = title;
+    @Column(name = "users_id", insertable = false, updatable = false)
+    private Integer usersId;
+
+    @Column(name = "posts_id", insertable = false, updatable = false)
+    private Integer postsId;
+
+    public Comments( String content, String timestamp, @NotNull Users users, @NotNull Posts posts, Integer usersId, Integer postsId) {
         this.content = content;
         this.timestamp = timestamp;
         this.users = users;
         this.posts = posts;
+        this.usersId = usersId;
+        this.postsId = postsId;
     }
 }
 

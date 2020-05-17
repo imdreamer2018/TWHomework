@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -55,7 +56,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
                 .authorizeRequests()
-                    .antMatchers("/api/user","/api/users","/api/post","/api/posts","/api/redis/**","/api/auth/logout","/api/auth/me","/api/auth/permissions","/api/auth/resetPassword").authenticated()
+                    .antMatchers(HttpMethod.GET,"/api/users","/api/comments").authenticated()
+                    .antMatchers(HttpMethod.POST,"/api/users/**","/api/posts/**","/api/auth/registerUsersByFaker","/api/postsByFaker","/api/commentsByFaker").authenticated()
+                    .antMatchers(HttpMethod.PUT,"/api/users/**","/api/posts/**").authenticated()
+                    .antMatchers(HttpMethod.DELETE,"/api/users/**","/api/posts/**").authenticated()
+                    .antMatchers("/api/redis/**","/api/auth/logout","/api/auth/me","/api/auth/permissions").authenticated()
                     .anyRequest().permitAll()
                     .and()
                     .addFilter(new JWTAuthenticationFilter(authenticationManager()))

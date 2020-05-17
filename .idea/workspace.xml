@@ -7,10 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b44cc5d5-b9ca-48d5-a7a1-5875bddd5792" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/TW_springBootTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/CurrentUserInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/PostServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileContent/annotation-processors.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/TWHomework.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/0732355fbc97c0fa7ddfc2f3111c9187adbfe917" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/b/bb173f9557479135e0f1bcd9c6c5f7b4ae5f77e8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f50b148f27e0804846bbc18b673e036c6748a44a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_1__create_users.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_2__create_posts.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_3__create_comments.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
@@ -19,26 +24,98 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9311cfdc-9f2f-4cc3-a1b7-c147f1f157df.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9311cfdc-9f2f-4cc3-a1b7-c147f1f157df.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12f5014dccceee390e29ceb8281093ee1139cc4f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12f5014dccceee390e29ceb8281093ee1139cc4f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1adf94f2196adb85f6ba1c5a331f46f77a814823" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1f1763f358c257ea3515417352b82b0165647ad1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41a3ec0b74b17f8480e1af6a049df8ce99e37b40" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41a3ec0b74b17f8480e1af6a049df8ce99e37b40" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b9a274647cb660f551588771723732873ab2cba" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b9a274647cb660f551588771723732873ab2cba" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f213646bb41d162dd1dfbf483a40c06f31e0f66" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f213646bb41d162dd1dfbf483a40c06f31e0f66" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/55170be37b01b6ca794d8f218304c4e6efb4101e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/55170be37b01b6ca794d8f218304c4e6efb4101e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/84d0e809a845463c2457ad81ef8f691235e36d9e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/84d0e809a845463c2457ad81ef8f691235e36d9e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/96b700b57d6a01e4646b781d9b2713ef519dc4c5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/96b700b57d6a01e4646b781d9b2713ef519dc4c5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/1/d1563dcce34ebf2670efe10544e882b17bdd9ed8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/1/d1563dcce34ebf2670efe10544e882b17bdd9ed8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6ccce14bf0fbf02e851e2076e8aeca8b332780a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6ccce14bf0fbf02e851e2076e8aeca8b332780a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f7bd29398bcff6ba155dd015ae89785b6e9247fc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f7bd29398bcff6ba155dd015ae89785b6e9247fc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb63119fb426c204ff7057fe465460494b0e50d7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb63119fb426c204ff7057fe465460494b0e50d7" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/META-INF/spring-configuration-metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/initial/META-INF/initial.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/Exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/Exception/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/configuration/AuthenticationEntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/configuration/AuthenticationEntryPoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/configuration/RedisConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/configuration/RedisConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/PostService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/thoughtworks/homework/service/AuthServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/thoughtworks/homework/service/AuthServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/thoughtworks/homework/service/UserServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/thoughtworks/homework/service/UserServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.thoughtworks.homework.service.AuthServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.thoughtworks.homework.service.AuthServiceTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.thoughtworks.homework.service.UserServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.thoughtworks.homework.service.UserServiceTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.thoughtworks.homework.service.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.thoughtworks.homework.service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.thoughtworks.homework.service.AuthServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.thoughtworks.homework.service.AuthServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.thoughtworks.homework.service.UserServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.thoughtworks.homework.service.UserServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/configuration/AuthenticationEntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/configuration/AuthenticationEntryPoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/configuration/RedisConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/configuration/RedisConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/configuration/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/configuration/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/entity/Comments.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/entity/Comments.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/entity/Posts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/entity/Posts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/entity/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/entity/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/exception/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/filter/JWTAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/filter/JWTAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/filter/JWTAuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/filter/JWTAuthorizationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/repository/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/repository/CommentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/repository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/repository/PostRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/PostService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/UserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/db/migration/V1_0__init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/db/migration/V1_0__init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/thoughtworks/homework/service/UserServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/com/thoughtworks/homework/service/UserServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7f68d094514cb1422ce2c716910afaecd92e70ff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/AuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/AuthenticationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/RedisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/RedisConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Posts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/filter/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/filter/JWTAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/filter/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/filter/JWTAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/AuthService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/UserDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/AuthServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/AuthServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1_0__init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_0__init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/UserServiceTest.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/classes/" />
-    <ignored path="$PROJECT_DIR$/.gradle/" />
-    <ignored path="$PROJECT_DIR$/build/" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,11 +152,22 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="spring_test: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="spring_test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="spring_test: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="posts: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="spring_test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="spring_test: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -97,7 +185,18 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="TW_springBootTest" type="f1a62948:ProjectNode" />
+                <item name="TWHomework" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TWHomework" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TWHomework" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -105,121 +204,6 @@
         </projects_view>
       </state>
     </system>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/PostService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2706">
-              <caret line="82" column="41" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/PostServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/CurrentUserInfoService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/UserServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1810">
-              <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/AuthServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1452">
-              <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.5.0/2d1a80b6d542d1cde3c0167ddf5c99790c31c78e/junit-jupiter-api-5.5.0-sources.jar!/org/junit/jupiter/api/Assertions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="1123" selection-start-line="1123" selection-end-line="1123" />
-              <folding>
-                <element signature="e#42190#42191#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/CommentService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1500">
-              <caret line="42" column="42" lean-forward="true" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/AuthService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="80" column="9" lean-forward="true" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/RedisService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -231,114 +215,15 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>KeyVaultCredentials</find>
-      <find>cacheManager</find>
-      <find>re</find>
-      <find>redisConnectionF</find>
-      <find>defined in class path resource [com/thoughtworks/homework/configuration/RedisConfiguration.class]: Bean instantiation via factory method failed;</find>
-      <find>commons-pool2</find>
-      <find>timeout</find>
-      <find>redisConnectionFactoryForKeyVault</find>
-      <find>KeyVaultConfiguration</find>
-      <find>keyvault.broker.default</find>
-      <find>ServiceClientCredentials</find>
-      <find>UsernamePasswordAuthenticationFilter</find>
-      <find>createToken</find>
-      <find>UsernamePasswordAuthenticationToken</find>
-      <find>PasswordEncoder</find>
-      <find>JwtUser</find>
-      <find>admin</find>
-      <find>role</find>
-      <find>Shiro</find>
-      <find>CommentResponse</find>
-      <find>postRespository</find>
-      <find>commentRespository.save(p);</find>
-      <find>postService</find>
-      <find>PostResponse</find>
-      <find>post</find>
-      <find>Posts</find>
-      <find>plugins</find>
-      <find>doc</find>
-      <find>authentication</find>
-      <find>null</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-      <replace>Comments</replace>
-      <replace>commentRespository</replace>
-      <replace>评论</replace>
-      <replace>PostResponse</replace>
-      <replace>commentService</replace>
-      <replace>CommentResponse</replace>
-      <replace>comment</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service</dir>
-      <dir>$PROJECT_DIR$/src/test/java/com/thoughtworks/homework</dir>
-      <dir>$PROJECT_DIR$/src/test-share</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1_0__insert__user.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/exception/UserException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/exception/BasePostException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Post.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/RedisController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/Swagger2Config.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/Swagger2Config.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/filter/SecurityBasicAuthFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/SwaggerConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/exception/GlobalExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/CommentsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/dto/PostResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/dto/CommentResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1_0__init.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/MailController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/JwtUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Posts.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/MailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/filter/JWTAuthorizationFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/dto/BaseResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/CommentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/PostController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/PostRespository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/CommentRespository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Comments.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-local.yml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/dto/LoginRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/CommentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/SecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/AuthController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/MvcConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/PostRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/RedisService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/filter/JWTAuthenticationFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/model/LoginUser.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/RedisConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/UserServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/utils/GetUserInfoFromToken.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/CurrentUserInfoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/PostService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/AuthService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/AuthServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/CommentService.java" />
-      </list>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
     </option>
   </component>
   <component name="LogFilters">
@@ -355,112 +240,8 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1100" />
-  </component>
+  <component name="ProjectId" id="1bilZL60Lj8uCPNcAV2TdsLYkDF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TW_springBootTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TW_springBootTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="TW_springBootTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TW_springBootTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TW_springBootTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TW_springBootTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="TW_springBootTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TW_springBootTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TW_springBootTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TW_springBootTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TW_springBootTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TW_springBootTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TW_springBootTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TW_springBootTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TW_springBootTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TW_springBootTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TW_springBootTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TW_springBootTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="TW_springBootTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TW_springBootTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TW_springBootTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TW_springBootTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql.8&#10;redshift&#10;mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -489,7 +270,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15128593" />
     <property name="project.structure.side.proportion" value="0.4695052" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
@@ -516,8 +297,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AuthServiceTest (1)">
-    <configuration name="initial [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="TWHomework [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -528,7 +309,26 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="bootJar" />
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TWHomework [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -551,40 +351,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthServiceTest.should_return_BaseResponse_json_when_changePermissions_successful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="initial.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.thoughtworks.homework.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.thoughtworks.homework.service" />
-      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.homework.service.AuthServiceTest" />
-      <option name="METHOD_NAME" value="should_return_BaseResponse_json_when_changePermissions_successful" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthServiceTest.should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TW_springBootTest.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.thoughtworks.homework.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.thoughtworks.homework.service" />
-      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.homework.service.AuthServiceTest" />
-      <option name="METHOD_NAME" value="should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="initial.test" />
+      <module name="TWHomework.test" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.thoughtworks.homework.service.*" />
@@ -598,16 +366,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="initial.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.thoughtworks.homework.Application" />
+    <configuration name="UserServiceTest.should_return_userInfo_json_when_update_user_by_token_userInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TWHomework.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.thoughtworks.homework.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.thoughtworks.homework.service" />
+      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.homework.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="should_return_userInfo_json_when_update_user_by_token_userInfo" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="initial.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="hello.Application" />
+      <module name="TWHomework.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.thoughtworks.homework.Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -686,22 +464,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.initial [bootJar]" />
-      <item itemvalue="JUnit.AuthServiceTest.should_return_BaseResponse_json_when_changePermissions_successful" />
+      <item itemvalue="Gradle.TWHomework [jar]" />
+      <item itemvalue="Gradle.TWHomework [build]" />
+      <item itemvalue="JUnit.AuthServiceTest (1)" />
+      <item itemvalue="JUnit.UserServiceTest.should_return_userInfo_json_when_update_user_by_token_userInfo" />
       <item itemvalue="JUnit.UserServiceTest" />
       <item itemvalue="Spring Boot.Application" />
-      <item itemvalue="Spring Boot.Application (1)" />
       <item itemvalue="Tomcat Server.spingBootTest" />
-      <item itemvalue="JUnit.AuthServiceTest (1)" />
-      <item itemvalue="JUnit.AuthServiceTest.should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AuthServiceTest (1)" />
-        <item itemvalue="JUnit.AuthServiceTest.should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid" />
-        <item itemvalue="Gradle.initial [bootJar]" />
+        <item itemvalue="Gradle.TWHomework [build]" />
         <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.AuthServiceTest.should_return_BaseResponse_json_when_changePermissions_successful" />
+        <item itemvalue="JUnit.UserServiceTest.should_return_userInfo_json_when_update_user_by_token_userInfo" />
+        <item itemvalue="Gradle.TWHomework [jar]" />
+        <item itemvalue="JUnit.AuthServiceTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -762,136 +539,18 @@
       <workItem from="1563770935920" duration="2875000" />
       <workItem from="1563858232040" duration="2000" />
       <workItem from="1563867333430" duration="3801000" />
+      <workItem from="1589122854615" duration="216000" />
+      <workItem from="1589157410175" duration="1348000" />
+      <workItem from="1589159272331" duration="3677000" />
+      <workItem from="1589163337694" duration="7651000" />
+      <workItem from="1589189722872" duration="9915000" />
+      <workItem from="1589275839389" duration="18251000" />
+      <workItem from="1589368512069" duration="17464000" />
+      <workItem from="1589418149084" duration="30057000" />
+      <workItem from="1589504480468" duration="2988000" />
+      <workItem from="1589701352527" duration="58000" />
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="UserServiceTest - 2019.07.16 at 10h 15m 04s.xml">
-      <configuration name="UserServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuthServiceTest_(1) - 2019.07.23 at 16h 04m 17s.xml">
-      <configuration name="AuthServiceTest (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuthServiceTest_should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid - 2019.07.23 at 16h 07m 12s.xml">
-      <configuration name="AuthServiceTest.should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuthServiceTest_should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid - 2019.07.23 at 16h 13m 30s.xml">
-      <configuration name="AuthServiceTest.should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuthServiceTest_should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid - 2019.07.23 at 16h 14m 57s.xml">
-      <configuration name="AuthServiceTest.should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuthServiceTest_should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid - 2019.07.23 at 16h 18m 23s.xml">
-      <configuration name="AuthServiceTest.should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuthServiceTest_should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid - 2019.07.23 at 16h 18m 52s.xml">
-      <configuration name="AuthServiceTest.should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuthServiceTest_should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid - 2019.07.23 at 16h 19m 06s.xml">
-      <configuration name="AuthServiceTest.should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuthServiceTest_should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid - 2019.07.23 at 16h 19m 28s.xml">
-      <configuration name="AuthServiceTest.should_throw_exception_when_logout_with_header_has_not_token_or_token_is_invalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuthServiceTest_(1) - 2019.07.23 at 16h 22m 08s.xml">
-      <configuration name="AuthServiceTest (1)" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="315909000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17866324" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32930845" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31401616" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39487872" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.328807" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49946696" weight="0.38828632" />
-      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32783705" />
-      <window_info anchor="bottom" id="Spring" order="9" weight="0.3286334" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.44609165" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5010661" side_tool="true" weight="0.46420825" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49928468" weight="0.32345015" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32968536" />
-      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Thumbnails" order="16" weight="0.32968536" />
-      <window_info anchor="bottom" id="SonarLint" order="17" weight="0.32479784" />
-      <window_info anchor="bottom" id="Duplicates" order="18" weight="0.32930845" />
-      <window_info anchor="bottom" id="Version Control" order="19" sideWeight="0.49946696" weight="0.3286334" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24946696" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.32942432" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" weight="0.32942432" />
-      <window_info anchor="right" id="Database" order="7" weight="0.32942432" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Bean Validation" order="10" weight="0.32942432" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24606581" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35978112" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3994528" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32968536" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32831737" />
-      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32831737" />
-      <window_info anchor="bottom" id="Spring" order="9" weight="0.32968536" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" weight="0.3474692" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5007153" side_tool="true" weight="0.32831737" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49928468" weight="0.3269494" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32968536" />
-      <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info anchor="bottom" id="Version Control" order="16" weight="0.32968536" />
-      <window_info anchor="bottom" id="Thumbnails" order="17" weight="0.32968536" />
-      <window_info anchor="bottom" id="SonarLint" order="18" weight="0.32831737" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.3297568" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" weight="0.3297568" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -912,20 +571,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -988,308 +634,6 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/util/ArrayList.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/5.1.8.RELEASE/bff0205b0e1a8219a07309aa90589ad71414ed55/spring-test-5.1.8.RELEASE-sources.jar!/org/springframework/test/context/junit4/statements/RunAfterTestExecutionCallbacks.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/5.1.8.RELEASE/bff0205b0e1a8219a07309aa90589ad71414ed55/spring-test-5.1.8.RELEASE-sources.jar!/org/springframework/test/context/junit4/statements/RunAfterTestMethodCallbacks.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/5.1.8.RELEASE/bff0205b0e1a8219a07309aa90589ad71414ed55/spring-test-5.1.8.RELEASE-sources.jar!/org/springframework/test/context/junit4/statements/RunBeforeTestClassCallbacks.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/5.1.8.RELEASE/bff0205b0e1a8219a07309aa90589ad71414ed55/spring-test-5.1.8.RELEASE-sources.jar!/org/springframework/test/context/junit4/statements/RunAfterTestClassCallbacks.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/ParentRunner.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/5.1.8.RELEASE/bff0205b0e1a8219a07309aa90589ad71414ed55/spring-test-5.1.8.RELEASE-sources.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runner/JUnitCore.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/5.1.5.RELEASE/2d0bd2618f3d384b83dcc225d78588f05af9229d/spring-security-web-5.1.5.RELEASE-sources.jar!/org/springframework/security/web/authentication/logout/LogoutFilter.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/5.1.5.RELEASE/48ad8a299212cef3d4601b2154c9ea5c64a27f85/spring-security-core-5.1.5.RELEASE-sources.jar!/org/springframework/security/authentication/UsernamePasswordAuthenticationToken.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/CommentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.9.9/c8a91180aef81d62f44b27cef42bacb168871a4c/jackson-core-2.9.9-sources.jar!/com/fasterxml/jackson/core/TreeCodec.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.9.9/c8a91180aef81d62f44b27cef42bacb168871a4c/jackson-core-2.9.9-sources.jar!/com/fasterxml/jackson/core/ObjectCodec.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.9.9/c8a91180aef81d62f44b27cef42bacb168871a4c/jackson-core-2.9.9-sources.jar!/com/fasterxml/jackson/core/JsonFactory.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.9/8b717e1bc24a642cee070ae3860f04eb20c92779/jackson-databind-2.9.9-sources.jar!/com/fasterxml/jackson/databind/MappingJsonFactory.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.9/8b717e1bc24a642cee070ae3860f04eb20c92779/jackson-databind-2.9.9-sources.jar!/com/fasterxml/jackson/databind/ObjectMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/filter/JWTAuthorizationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/model/LoginUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/JwtUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/exception/AuthorizationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/dto/AuthorizationResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1089">
-          <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Comments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/RedisConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/KeyVaultConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.0/7e0a2636a39bce2dc0e65d210c41e140a5d0961c/lombok-1.18.0-sources.jar!/lombok/Getter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1683">
-          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/SwaggerConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1221">
-          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/PostController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-148">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/IMailServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/utils/JwtTokenUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#1739#1740#0" expanded="true" />
-            <element signature="e#1794#1795#0" expanded="true" />
-            <element signature="e#1868#1869#0" expanded="true" />
-            <element signature="e#1936#1937#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/filter/JWTAuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-770">
-          <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/IMailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/utils/GetUserInfoFromToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/MailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/RedisService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/PostService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2706">
-          <caret line="82" column="41" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/PostServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.5.0/2d1a80b6d542d1cde3c0167ddf5c99790c31c78e/junit-jupiter-api-5.5.0-sources.jar!/org/junit/jupiter/api/Assertions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="1123" selection-start-line="1123" selection-end-line="1123" />
-          <folding>
-            <element signature="e#42190#42191#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/AuthServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1452">
-          <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/UserServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1810">
-          <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/AuthService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="80" column="9" lean-forward="true" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/CurrentUserInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/CommentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1500">
-          <caret line="42" column="42" lean-forward="true" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

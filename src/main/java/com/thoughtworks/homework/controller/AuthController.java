@@ -42,6 +42,15 @@ public class AuthController {
         return authService.register(users,registerCode);
     }
 
+    @ApiOperation(value = "注册随机账户", notes = "管理员可用")
+    @PostMapping(path = "/registerUsersByFaker")
+    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseBody
+    @PreAuthorize("hasRole('ADMIN')")
+    public BaseResponse registerUserByFaker(@RequestParam int registerUserNumber) {
+        return authService.registerUsersByFaker(registerUserNumber);
+    }
+
     @ApiOperation(value = "登陆账户")
     @PostMapping(path = "/login")
     public String login(@RequestBody LoginUser loginUser){

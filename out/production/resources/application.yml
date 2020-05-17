@@ -7,15 +7,15 @@ spring:
     hibernate:
       use-new-id-generator-mappings: false
   datasource:
-    url: jdbc:mysql://120.79.34.153:3306/spring_test?characterEncoding=utf8&characterSetResults=utf8
-    username: spring_test
-    password: tw
+    url: jdbc:mysql://192.168.0.108:3306/spring_test?characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: yq1996052468
     driver-class-name: com.mysql.cj.jdbc.Driver
   redis:
     database: 0
-    host: 120.79.34.153
+    host: 192.168.0.108
     port: 6379
-    password: tw
+    password: yq1996052468
     jedis:
       pool:
         max-active: 8

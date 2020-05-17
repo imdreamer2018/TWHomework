@@ -20,6 +20,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         Optional<Users> user = userRepository.findUserByEmail(email);
+        if (!user.isPresent()) {
+            throw new UsernameNotFoundException("验证失败");
+        }
         return new JwtUser(user.get());
     }
 }

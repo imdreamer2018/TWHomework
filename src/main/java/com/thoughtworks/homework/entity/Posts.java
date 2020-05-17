@@ -1,8 +1,11 @@
 package com.thoughtworks.homework.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -30,15 +33,21 @@ public class Posts implements Serializable {
     @Column(name = "timestamp")
     private String timestamp;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "users_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @NotNull
-    @JoinColumn(name = "users_id")
+    @JsonIgnore
     private Users users;
 
-    public Posts(@NotNull String title, String content, String timestamp, @NotNull Users users) {
+    @Column(name = "users_id", updatable = false, insertable = false)
+    private Integer usersId;
+
+    public Posts(@NotNull String title, String content, String timestamp, @NotNull Users users, Integer usersId) {
         this.title = title;
         this.content = content;
         this.timestamp = timestamp;
         this.users = users;
+        this.usersId = usersId;
     }
 }

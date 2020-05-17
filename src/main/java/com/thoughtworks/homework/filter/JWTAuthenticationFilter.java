@@ -5,6 +5,8 @@ import com.thoughtworks.homework.entity.JwtUser;
 import com.thoughtworks.homework.model.LoginUser;
 import com.thoughtworks.homework.service.RedisService;
 import com.thoughtworks.homework.utils.JwtTokenUtils;
+import lombok.SneakyThrows;
+import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -20,6 +22,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -54,6 +57,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
     // 成功验证后调用的方法
     // 如果验证成功，就生成token并返回
+    @SneakyThrows
     @Override
     public void successfulAuthentication(HttpServletRequest request,
                                          HttpServletResponse response,
@@ -83,14 +87,28 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         }
         redisService.set_timeout("Authentication_"+jwtUser.getEmail(),token,isRemember?10080:60);
         response.setHeader("token",JwtTokenUtils.TOKEN_PREFIX + token);
-        response.getWriter().write("login success!\ntoken:"+JwtTokenUtils.TOKEN_PREFIX + token);
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        response.setStatus(200);
+        PrintWriter writer = response.getWriter();
+        JSONObject successResponse = new JSONObject();
+        successResponse.put("email",jwtUser.getEmail());
+        successResponse.put("token",JwtTokenUtils.TOKEN_PREFIX + token);
+        writer.write(successResponse.toString());
     }
 
+    @SneakyThrows
     @Override
     public void unsuccessfulAuthentication(HttpServletRequest request,
                                            HttpServletResponse response,
                                            AuthenticationException failed) throws IOException, ServletException {
 
-        response.getWriter().write("authentication failed, reason: " + failed.getMessage());
+        response.setStatus(401);
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        PrintWriter writer = response.getWriter();
+        JSONObject errorResponse = new JSONObject();
+        errorResponse.put("error","authentication failed, reason: "+failed.getMessage());
+        writer.write(errorResponse.toString());
     }
 }
