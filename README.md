@@ -1,1 +1,1 @@
-This is blog API homework by springBoot.
+This is a homework about blog API  by springBoot.
