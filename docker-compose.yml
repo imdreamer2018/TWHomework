@@ -1,0 +1,41 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: imdreamer/tw-homework:v1
+    container_name: tw-homework-web
+    restart: always
+    ports:
+      - "8080:8080"
+    links:
+      - mysql
+      - redis
+    environment:
+      SPRING_MYSQL_URL: jdbc:mysql://mysql:3306/spring?characterEncoding=utf8&characterSetResults=utf8
+      SPRING_MYSQL_ROOT_USERNAME: root
+      SPRING_MYSQL_ROOT_PASSWORD: helloWorld
+      SPRING_REDIS_HOST: redis
+      SPRING_REDIS_PASSWORD: helloWorld
+      SPRING_SWAGGER_USERNAME: admin
+      SPRING_SWAGGER_PASSWORD: admin
+  mysql:
+    image: mysql
+    container_name: mysql-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: spring
+      MYSQL_USER: test
+      MYSQL_PASS: test
+      MYSQL_ROOT_PASSWORD: helloWorld
+    ports:
+      - "3306:3306"
+  redis:
+    image: redis
+    container_name: redis-db
+    command: redis-server --requirepass helloWorld
+    restart: always
+    environment:
+      REDIS_PASSWORD: helloWorld
+    ports:
+      - "6379:6379"
+

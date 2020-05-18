@@ -1,4 +1,4 @@
 
-Â%squid:RedundantThrowsDeclarationCheck+"„Remove the declaration of thrown exception 'org.springframework.security.core.AuthenticationException' which is a runtime exception.(¸Ð»’ùÿÿÿÿ8ð¶¬°¡.
-Csquid:S5164" Call "remove()" on "rememberMe".(ÓŒš¶þÿÿÿÿ8ð¶¬°¡.
 Fsquid:S11484"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ð¶¬°¡.
+Csquid:S5164" Call "remove()" on "rememberMe".(ÓŒš¶þÿÿÿÿ8ð¶¬°¡.
+Â%squid:RedundantThrowsDeclarationCheck+"„Remove the declaration of thrown exception 'org.springframework.security.core.AuthenticationException' which is a runtime exception.(¸Ð»’ùÿÿÿÿ8ð¶¬°¡.

@@ -17,13 +17,11 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Collections;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
@@ -61,36 +59,6 @@ public class UserServiceTest {
 
     }
 
-    @Test
-    public void should_return_usersInfo_json_when_get_users(){
-
-        when(userRepository.findAll()).thenReturn(Collections.singletonList(ZHANG_SAN));
-
-        UserResponse<Iterable<Users>> u = userService.getAllUsers();
-
-        assertEquals("数据获取成功！",u.getMessage());
-    }
-
-    @Test
-    public void should_throw_exception_when_find_user_by_email_with_user_is_not_exist(){
-        when(userRepository.findUserByEmail(anyString())).thenReturn(Optional.empty());
-
-        BaseUserException exception = assertThrows(BaseUserException.class,() ->userService.findUserByEmail("imdreamer.yq@qq.com"));
-
-        assertEquals("用户不存在",exception.getMessage());
-    }
-
-    @Test
-    public void should_return_userInfo_when_find_user_by_email_with_user_is_exist() throws BaseUserException {
-
-        ZHANG_SAN.setId(1);
-
-        when(userRepository.findUserByEmail(anyString())).thenReturn(Optional.ofNullable(ZHANG_SAN));
-
-        UserResponse<Users> u = userService.findUserByEmail("imdreamer@qq.com");
-
-        assertEquals("查找成功！",u.getMessage());
-    }
 
     @Test
     public void should_return_userInfo_json_when_update_user_by_token_userInfo() throws BaseUserException {
@@ -98,7 +66,7 @@ public class UserServiceTest {
 
         when(currentUserInfoService.getUserInfo()).thenReturn(ZHANG_SAN);
 
-        UserResponse<Users> u = userService.updateUser("zhangsan",18,"male");
+        UserResponse<Users> u = userService.updateUser(1,ZHANG_SAN);
 
         assertEquals("用户名修改成功！",u.getMessage());
     }

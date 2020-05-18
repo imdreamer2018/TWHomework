@@ -6,7 +6,7 @@ import com.thoughtworks.homework.model.LoginUser;
 import com.thoughtworks.homework.service.RedisService;
 import com.thoughtworks.homework.utils.JwtTokenUtils;
 import lombok.SneakyThrows;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
+import org.json.JSONObject;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

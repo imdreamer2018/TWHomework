@@ -7,113 +7,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b44cc5d5-b9ca-48d5-a7a1-5875bddd5792" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/TWHomework.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/0732355fbc97c0fa7ddfc2f3111c9187adbfe917" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/b/bb173f9557479135e0f1bcd9c6c5f7b4ae5f77e8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f50b148f27e0804846bbc18b673e036c6748a44a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_1__create_users.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_2__create_posts.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_3__create_comments.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileContent/annotation-processors.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9311cfdc-9f2f-4cc3-a1b7-c147f1f157df.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9311cfdc-9f2f-4cc3-a1b7-c147f1f157df.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12f5014dccceee390e29ceb8281093ee1139cc4f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12f5014dccceee390e29ceb8281093ee1139cc4f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1adf94f2196adb85f6ba1c5a331f46f77a814823" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1f1763f358c257ea3515417352b82b0165647ad1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41a3ec0b74b17f8480e1af6a049df8ce99e37b40" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41a3ec0b74b17f8480e1af6a049df8ce99e37b40" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b9a274647cb660f551588771723732873ab2cba" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b9a274647cb660f551588771723732873ab2cba" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f213646bb41d162dd1dfbf483a40c06f31e0f66" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f213646bb41d162dd1dfbf483a40c06f31e0f66" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/55170be37b01b6ca794d8f218304c4e6efb4101e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/55170be37b01b6ca794d8f218304c4e6efb4101e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/84d0e809a845463c2457ad81ef8f691235e36d9e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/84d0e809a845463c2457ad81ef8f691235e36d9e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/96b700b57d6a01e4646b781d9b2713ef519dc4c5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/96b700b57d6a01e4646b781d9b2713ef519dc4c5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/1/d1563dcce34ebf2670efe10544e882b17bdd9ed8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/1/d1563dcce34ebf2670efe10544e882b17bdd9ed8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6ccce14bf0fbf02e851e2076e8aeca8b332780a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6ccce14bf0fbf02e851e2076e8aeca8b332780a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f7bd29398bcff6ba155dd015ae89785b6e9247fc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f7bd29398bcff6ba155dd015ae89785b6e9247fc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb63119fb426c204ff7057fe465460494b0e50d7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb63119fb426c204ff7057fe465460494b0e50d7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/Exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/Exception/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/configuration/AuthenticationEntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/configuration/AuthenticationEntryPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/configuration/RedisConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/configuration/RedisConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/configuration/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/configuration/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/controller/AuthController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/entity/Comments.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/entity/Comments.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/entity/Posts.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/entity/Posts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/entity/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/entity/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/filter/JWTAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/filter/JWTAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/filter/JWTAuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/filter/JWTAuthorizationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/repository/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/repository/CommentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/repository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/repository/PostRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/AuthService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/CommentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/thoughtworks/homework/service/AuthServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/thoughtworks/homework/service/AuthServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/UserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/thoughtworks/homework/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/thoughtworks/homework/service/UserServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/thoughtworks/homework/service/UserServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/gs-accessing-data-mysql-0.1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/gs-accessing-data-mysql-0.1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.thoughtworks.homework.service.AuthServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.thoughtworks.homework.service.AuthServiceTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.thoughtworks.homework.service.UserServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.thoughtworks.homework.service.UserServiceTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.thoughtworks.homework.service.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.thoughtworks.homework.service.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/db/migration/V1_0__init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/db/migration/V1_0__init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/db/migration/V1_1__create_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/db/migration/V1_1__create_users.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.thoughtworks.homework.service.AuthServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.thoughtworks.homework.service.AuthServiceTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.thoughtworks.homework.service.UserServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.thoughtworks.homework.service.UserServiceTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/configuration/AuthenticationEntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/configuration/AuthenticationEntryPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/configuration/RedisConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/configuration/RedisConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/configuration/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/configuration/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/PostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/entity/Comments.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/entity/Comments.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/entity/Posts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/entity/Posts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/entity/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/entity/Users.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/exception/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/filter/JWTAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/filter/JWTAuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/filter/JWTAuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/filter/JWTAuthorizationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/repository/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/repository/CommentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/repository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/repository/PostRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/AuthService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/UserDetailsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/thoughtworks/homework/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/db/migration/V1_0__init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/db/migration/V1_0__init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/com/thoughtworks/homework/service/UserServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/com/thoughtworks/homework/service/UserServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7f68d094514cb1422ce2c716910afaecd92e70ff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/AuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/AuthenticationEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/RedisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/RedisConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/configuration/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Comments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Posts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/entity/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/filter/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/filter/JWTAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/filter/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/filter/JWTAuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thoughtworks/homework/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1_0__init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_0__init.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thoughtworks/homework/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -267,22 +219,23 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15128593" />
     <property name="project.structure.side.proportion" value="0.4695052" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/test-share/java" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.thoughtworks.homework.configuration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/db/migration" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.thoughtworks.homework.configuration" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/test-share/java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -297,7 +250,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="Gradle.TWHomework [bootJar]">
+    <configuration name="TWHomework [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="TWHomework [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -335,21 +307,6 @@
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
-    </configuration>
-    <configuration name="AuthServiceTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TW_springBootTest.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.thoughtworks.homework.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.thoughtworks.homework.service" />
-      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.homework.service.AuthServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TWHomework.test" />
@@ -466,19 +423,19 @@
     <list>
       <item itemvalue="Gradle.TWHomework [jar]" />
       <item itemvalue="Gradle.TWHomework [build]" />
-      <item itemvalue="JUnit.AuthServiceTest (1)" />
       <item itemvalue="JUnit.UserServiceTest.should_return_userInfo_json_when_update_user_by_token_userInfo" />
       <item itemvalue="JUnit.UserServiceTest" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Tomcat Server.spingBootTest" />
+      <item itemvalue="Gradle.TWHomework [bootJar]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TWHomework [bootJar]" />
         <item itemvalue="Gradle.TWHomework [build]" />
         <item itemvalue="JUnit.UserServiceTest" />
         <item itemvalue="JUnit.UserServiceTest.should_return_userInfo_json_when_update_user_by_token_userInfo" />
         <item itemvalue="Gradle.TWHomework [jar]" />
-        <item itemvalue="JUnit.AuthServiceTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -548,7 +505,8 @@
       <workItem from="1589368512069" duration="17464000" />
       <workItem from="1589418149084" duration="30057000" />
       <workItem from="1589504480468" duration="2988000" />
-      <workItem from="1589701352527" duration="58000" />
+      <workItem from="1589701352527" duration="383000" />
+      <workItem from="1589776305122" duration="11190000" />
     </task>
     <servers />
   </component>
@@ -634,96 +592,5 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>initial:war exploded</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.4695052" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.4695052" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>commons-fileupload-1.3.2</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.4695052" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.4695052" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>initial</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.4695052" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: junit:junit:4.12</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.4695052" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
