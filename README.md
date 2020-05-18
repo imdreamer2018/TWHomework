@@ -86,9 +86,12 @@ docker-compose up
 
 #### Pull my docker images
 
+If you want pull my docker images,then you should not git clone this project,only download the [docker-compse](https://github.com/imdreamer2018/TWHomework/blob/master/docker-compose.yml) file.Finally using docker-compose construct this project.
+
 ```shell
 #pull my docker.io images
 docker pull imdreamer/tw-homework:v1
+#download docker-compse file
 docker-compose up
 ```
 
@@ -124,3 +127,4 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 ## License
 
 [MIT ](https://github.com/imdreamer2018/TWHomework/blob/master/LICENSE) © Imdreamer
+
