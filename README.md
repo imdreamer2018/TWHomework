@@ -15,7 +15,7 @@
 
 - [Background](https://github.com/imdreamer2018/TWHomework#background)
 - [Install](https://github.com/imdreamer2018/TWHomework#install)
-- [Contrubuting](https://github.com/imdreamer2018/TWHomework#Contrubuting)
+- [Contributing](https://github.com/imdreamer2018/TWHomework#Contributing)
 - [License](https://github.com/imdreamer2018/TWHomework#license)
 
 ## Background
