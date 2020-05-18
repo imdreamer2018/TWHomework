@@ -1,6 +1,7 @@
-<<<<<<< HEAD
+
 <p align="center">
 <img align="center" src="http://imdreamer.oss-cn-hangzhou.aliyuncs.com/picGo/springboot.png"/>
+
 
 <p align="center"><b>SimpleBlog API</b></p>
 
@@ -12,9 +13,10 @@
 
 ## Table of Contents
 
-- [Background](https://github.com/imdreamer2018/SimpleBlog#background)
-- [Install](https://github.com/imdreamer2018/SimpleBlog#install)
-- [License](https://github.com/imdreamer2018/SimpleBlog#license)
+- [Background](https://github.com/imdreamer2018/TWHomework#background)
+- [Install](https://github.com/imdreamer2018/TWHomework#install)
+- [Contrubuting](https://github.com/imdreamer2018/TWHomework#Contrubuting)
+- [License](https://github.com/imdreamer2018/TWHomework#license)
 
 ## Background
 
@@ -96,20 +98,11 @@ Feel free to dive in! [Open an issue](https://github.com/RichardLitt/standard-re
 
 Standard Readme follows the [Contributor Covenant](http://contributor-covenant.org/version/1/3/0/) Code of Conduct.
 
-### Contributors
-
-This project exists thanks to all the people who contribute.
-
-## License
-
-[MIT ](https://github.com/imdreamer2018/SimpleBlog/blob/master/LICENSE) © Imdreamer
-=======
-This is a homework about blog API  by springBoot.
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-## Contributors ✨
+### Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -123,9 +116,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/764775185"><img src="https://avatars0.githubusercontent.com/u/44635799?v=4" width="100px;" alt=""/><br /><sub><b>764775185</b></sub></a><br /><a href="https://github.com/imdreamer2018/TWHomework/commits?author=764775185" title="Code">💻</a></td>
   </tr>
 </table>
+
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
 >>>>>>> cfdd54a6691b21b9a708f9795d83748d8e2ab6de
+
+## License
+
+[MIT ](https://github.com/imdreamer2018/TWHomework/blob/master/LICENSE) © Imdreamer
