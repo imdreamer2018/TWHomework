@@ -1,7 +1,0 @@
-
-psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š‡Æð8ÓÄë– .
-Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8‘ÖÙ‰¾-
-Fsquid:S11485"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8»¯·Ÿ¾-
-Lsquid:S2140*")Use "java.util.Random.nextInt()" instead.(Ì¬¬¢øÿÿÿÿ8˜¢µŸ¾-
-Gsquid:S2140")Use "java.util.Random.nextInt()" instead.(Š‡Æð8”’©Š¾-
-usquid:S00117*"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì¬¬¢øÿÿÿÿ8ÓÄë– .

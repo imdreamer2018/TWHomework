@@ -1,4 +1,0 @@
-
-’squid:S1488\"oImmediately return this expression instead of assigning it to the temporary variable "securityBasicAuthFilter".(ÍÒ€ñùÿÿÿÿ8ŒúÿÀ-
-Csquid:S1659L"%Declare "dftPass" on a separate line.(¾¥¿Å8„µëÎ¾-
-squid:S3305+"^Inject this field value directly into "securityBasicAuthFilter", the only method that uses it.(¼Êê¬ıÿÿÿÿ8ŒúÿÀ-
