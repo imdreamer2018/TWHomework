@@ -28,10 +28,11 @@
 
 - Post blog and comment API
 - Migrate mysql support
-- Redis authentication
+- Redis cache
 - Email support
 - Swagger support
-- Authentication
+- Spring security
+- JWT for Authentication
 - Role permissions
 - REST API
 - **Perfect application structure**
